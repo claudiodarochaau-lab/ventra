@@ -1082,12 +1082,54 @@
   </section>
 
   <!-- ─── CONTACT ───────────────────────────────────────── -->
-  <script src="https://js-ap1.hsforms.net/forms/embed/442945735.js" defer></script>
   <section id="contact">
+    <!-- HUBSPOT FORM: Portal ID: [ADD YOUR PORTAL ID] · Form ID: [ADD YOUR FORM ID] -->
     <div class="contact-inner">
       <div class="contact-form-col">
         <h2 class="section-title contact-title">Let's talk about your site.</h2>
-        <div class="hs-form-frame" data-region="ap1" data-form-id="bf7f1301-db8d-4c1c-9710-d8d3b6ea26d8" data-portal-id="442945735"></div>
+        <form class="contact-form" id="enquiry-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First name</label>
+              <input type="text" id="first-name" name="first_name" placeholder="Jane" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last name</label>
+              <input type="text" id="last-name" name="last_name" placeholder="Smith" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="work-email">Work email</label>
+            <input type="email" id="work-email" name="work_email" placeholder="jane@yourcompany.com.au" required>
+          </div>
+          <div class="form-group">
+            <label for="business-name">Business name</label>
+            <input type="text" id="business-name" name="business_name" placeholder="Acme Corp" required>
+          </div>
+          <div class="form-group">
+            <label for="business-type">Business type</label>
+            <select id="business-type" name="business_type" required>
+              <option value="" disabled selected>Select your industry</option>
+              <option value="corporate-office">Corporate office</option>
+              <option value="gym-fitness">Gym &amp; fitness</option>
+              <option value="education">Education</option>
+              <option value="hospitality">Hospitality</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="num-locations">Number of locations</label>
+            <input type="number" id="num-locations" name="num_locations" placeholder="1" min="1">
+          </div>
+          <div class="form-group">
+            <label for="message">Message <span style="font-weight:400;text-transform:none;letter-spacing:0;color:rgba(171,171,171,0.6);">(optional)</span></label>
+            <textarea id="message" name="message" placeholder="Tell us about your site, volumes, or anything else that's useful."></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-dark">Send enquiry</button>
+          </div>
+          <div class="form-confirmation" id="form-confirmation" role="alert" aria-live="polite"></div>
+        </form>
       </div>
       <div class="contact-info">
         <p class="contact-info-title">Get in touch</p>
@@ -1124,6 +1166,46 @@
     </div>
   </footer>
 
+  <script>
+    (function () {
+      var form = document.getElementById('enquiry-form');
+      var confirmation = document.getElementById('form-confirmation');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var firstName = document.getElementById('first-name').value.trim();
+        var email = document.getElementById('work-email').value.trim();
+        var businessName = document.getElementById('business-name').value.trim();
+        var businessType = document.getElementById('business-type').value;
+
+        if (!firstName || !email || !businessName || !businessType) {
+          var missing = [];
+          if (!firstName) missing.push('first name');
+          if (!email) missing.push('work email');
+          if (!businessName) missing.push('business name');
+          if (!businessType) missing.push('business type');
+          confirmation.style.display = 'block';
+          confirmation.style.borderLeftColor = '#ABABAB';
+          confirmation.textContent = 'Please fill in: ' + missing.join(', ') + '.';
+          return;
+        }
+
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          confirmation.style.display = 'block';
+          confirmation.style.borderLeftColor = '#ABABAB';
+          confirmation.textContent = 'Please enter a valid work email address.';
+          return;
+        }
+
+        confirmation.style.display = 'block';
+        confirmation.style.borderLeftColor = 'var(--white)';
+        confirmation.textContent = 'Thanks ' + firstName + '. We\u2019ll be in touch within one business day.';
+        form.reset();
+      });
+    })();
+  </script>
 
 </body>
 </html>
