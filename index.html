@@ -131,6 +131,88 @@
       flex-shrink: 0;
     }
 
+    /* ─── MOBILE MENU ────────────────────────────────── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px 4px;
+      flex-shrink: 0;
+      z-index: 101;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+      transition: transform 0.25s ease, opacity 0.2s ease;
+      transform-origin: center;
+    }
+
+    .nav-hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-mobile {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--black);
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      padding: 8px 0 28px;
+      z-index: 100;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+    }
+
+    .nav-mobile.open {
+      display: block;
+    }
+
+    .nav-mobile-links {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .nav-mobile-links li a {
+      display: block;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--silver);
+      text-decoration: none;
+      padding: 16px 28px;
+      border-bottom: 1px solid #1a1a1a;
+      letter-spacing: 0.01em;
+      transition: color 0.2s ease;
+    }
+
+    .nav-mobile-links li:last-child a {
+      border-bottom: none;
+    }
+
+    .nav-mobile-links li a:hover {
+      color: var(--white);
+    }
+
+    .nav-mobile-cta {
+      padding: 0 28px;
+    }
+
     /* ─── HERO ───────────────────────────────────────── */
     #hero {
       background: var(--black);
@@ -770,6 +852,14 @@
         display: none;
       }
 
+      .nav-hamburger {
+        display: flex;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
       .problem-cards {
         grid-template-columns: 1fr;
       }
@@ -882,7 +972,7 @@
 <body>
 
   <!-- ─── NAV ──────────────────────────────────────────── -->
-  <nav id="nav" role="navigation" aria-label="Main navigation">
+  <nav id="nav" role="navigation" aria-label="Main navigation" style="position:relative;">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="Ventra Coffee home">
         <img src="logo-light.svg" style="height:62px;width:auto;" alt="Ventra Coffee">
@@ -894,6 +984,23 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#contact" class="btn btn-dark nav-cta">Get a Quote</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <ul class="nav-mobile-links">
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#trial">30-Day Trial</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-mobile-cta">
+        <a href="#contact" class="btn btn-dark">Get a Quote</a>
+      </div>
     </div>
   </nav>
 
@@ -922,6 +1029,17 @@
           <span class="stat-label">capital outlay</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ─── 30-DAY TRIAL (primary) ──────────────────────── -->
+  <section id="trial" style="background:var(--black);color:var(--white);padding:80px 32px;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <p class="section-label">Start with zero risk</p>
+      <h2 class="section-title" style="font-size:clamp(26px,3.5vw,40px);color:var(--white);margin-bottom:20px;max-width:640px;">Start with a 30-Day Trial. No Commitment Required.</h2>
+      <p style="font-size:15px;color:var(--silver);line-height:1.75;max-width:640px;margin-bottom:36px;">Not sure yet? We install an Entry-tier machine on your campus. Your team experiences the service. You see the FPOS revenue model in operation — students tapping, revenue flowing. No long-term commitment until you have seen it work. Most campuses that trial convert to a full 36-month partnership. That is not an accident.</p>
+      <a href="#contact" class="btn btn-dark">Start Your 30-Day Trial</a>
+      <p style="font-size:13px;color:var(--silver);margin-top:20px;">Or contact us directly: <a href="mailto:sales@ventracoffee.com.au" style="color:var(--silver);">sales@ventracoffee.com.au</a> &nbsp;·&nbsp; +61 257 007 038</p>
     </div>
   </section>
 
@@ -1143,14 +1261,11 @@
     </div>
   </section>
 
-  <!-- ─── 30-DAY TRIAL ─────────────────────────────────── -->
-  <section id="trial" style="background:var(--black);color:var(--white);padding:100px 32px;">
-    <div style="max-width:1200px;margin:0 auto;">
-      <p class="section-label">Start with zero risk</p>
-      <h2 class="section-title" style="font-size:clamp(28px,3.5vw,44px);color:var(--white);margin-bottom:28px;max-width:640px;">Start with a 30-Day Trial. No Commitment Required.</h2>
-      <p style="font-size:15px;color:var(--silver);line-height:1.75;max-width:640px;margin-bottom:40px;">Not sure yet? We install an Entry-tier machine on your campus. Your team experiences the service. You see the FPOS revenue model in operation — students tapping, revenue flowing. No long-term commitment until you have seen it work. Most campuses that trial convert to a full 36-month partnership. That is not an accident.</p>
-      <a href="#contact" class="btn btn-dark">Start Your 30-Day Trial</a>
-      <p style="font-size:13px;color:var(--silver);margin-top:20px;">Or contact us directly: <a href="mailto:sales@ventracoffee.com.au" style="color:var(--silver);">sales@ventracoffee.com.au</a> &nbsp;·&nbsp; +61 257 007 038</p>
+  <!-- ─── 30-DAY TRIAL (secondary, lean) ──────────────── -->
+  <section style="background:var(--black);color:var(--white);padding:64px 32px;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
+      <h2 class="section-title" style="font-size:clamp(22px,2.5vw,32px);color:var(--white);margin:0;">Ready to try it? Start with 30 days. No commitment.</h2>
+      <a href="#contact" class="btn btn-dark" style="flex-shrink:0;">Start Your 30-Day Trial</a>
     </div>
   </section>
 
@@ -1198,5 +1313,29 @@
     </div>
   </footer>
 
+  <script>
+    (function () {
+      var btn = document.getElementById('nav-hamburger');
+      var menu = document.getElementById('nav-mobile');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', function () {
+        var isOpen = menu.classList.toggle('open');
+        btn.classList.toggle('open', isOpen);
+        btn.setAttribute('aria-expanded', isOpen);
+        menu.setAttribute('aria-hidden', !isOpen);
+      });
+
+      // Close menu when any mobile nav link is clicked
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.remove('open');
+          btn.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          menu.setAttribute('aria-hidden', 'true');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
