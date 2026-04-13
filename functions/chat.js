@@ -19,7 +19,7 @@ export async function onRequest(context) {
       status: 405,
       headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
     });
-  }
+  } 
 
   let body;
   try {
