@@ -6,6 +6,8 @@
 
 ## What We Do
 
+Before any task, read BRAND.md in the repo root and apply all brand rules without exception.
+
 Ventra is a B2B managed coffee service built specifically for Australian private higher education providers. We deliver a two-machine solution — a premium staff machine and a student-facing FPOS machine with contactless payments — under a single monthly subscription. Everything is included: commercial-grade machines, specialty beans, maintenance, consumables, and auto-replenishment. Partners never file a maintenance request, never manage a supplier relationship, and never think about coffee. It simply works.
 
 **The core value exchange:**

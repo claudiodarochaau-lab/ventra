@@ -24,8 +24,10 @@ export async function onRequest(context) {
   let body;
   try {
     body = await request.json();
-  } catch {
-    return new Response(JSON.stringify({ error: "Invalid JSON body" }), {
+  } catch (e) {
+    const detail = e?.message ?? String(e);
+    console.error("JSON parse error:", detail);
+    return new Response(JSON.stringify({ error: "Invalid JSON body", detail }), {
       status: 400,
       headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
     });
@@ -42,53 +44,77 @@ export async function onRequest(context) {
     );
   }
 
-  // Call Anthropic API
-  const anthropicResponse = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": env.ANTHROPIC_API_KEY,
-      "anthropic-version": "2023-06-01",
-    },
-    body: JSON.stringify({
-      model: "claude-haiku-4-5-20251001",
-      max_tokens: 500,
-      system: SYSTEM_PROMPT,
-      messages,
-    }),
-  });
+  try {
+    // Call Anthropic API
+    const anthropicResponse = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": env.ANTHROPIC_API_KEY,
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify({
+        model: "claude-haiku-4-5-20251001",
+        max_tokens: 500,
+        system: SYSTEM_PROMPT,
+        messages,
+      }),
+    });
 
-  if (!anthropicResponse.ok) {
-    const err = await anthropicResponse.text();
-    console.error("Anthropic API error:", err);
-    return new Response(JSON.stringify({ error: "Failed to get AI response" }), {
-      status: 502,
+    if (!anthropicResponse.ok) {
+      const errText = await anthropicResponse.text();
+      console.error("Anthropic API error:", anthropicResponse.status, errText);
+      return new Response(
+        JSON.stringify({
+          error: "Anthropic API error",
+          status: anthropicResponse.status,
+          detail: errText,
+        }),
+        {
+          status: 502,
+          headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+        }
+      );
+    }
+
+    const anthropicData = await anthropicResponse.json();
+    const assistantMessage = anthropicData.content?.[0]?.text ?? "";
+
+    // Extract lead details from the full conversation (all messages + new assistant reply)
+    const fullConversation = [
+      ...messages,
+      { role: "assistant", content: assistantMessage },
+    ];
+    const leadDetails = extractLeadDetails(fullConversation);
+
+    if (leadDetails.email && leadDetails.name) {
+      try {
+        await syncHubSpotContact(env.HUBSPOT_ACCESS_TOKEN, leadDetails);
+        if (isQualifiedLead(fullConversation)) {
+          await createHubSpotAppointment(env.HUBSPOT_ACCESS_TOKEN, leadDetails);
+        }
+      } catch (hsErr) {
+        // HubSpot errors are non-fatal — log but don't break the response
+        console.error("HubSpot error:", hsErr?.message ?? String(hsErr));
+      }
+    }
+
+    return new Response(JSON.stringify({ response: assistantMessage }), {
+      status: 200,
       headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
     });
+
+  } catch (e) {
+    const detail = e?.message ?? String(e);
+    console.error("Unhandled error in onRequest:", detail);
+    return new Response(
+      JSON.stringify({ error: "Internal server error", detail }),
+      {
+        status: 500,
+        headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+      }
+    );
   }
-
-  const anthropicData = await anthropicResponse.json();
-  const assistantMessage = anthropicData.content?.[0]?.text ?? "";
-
-  // Extract lead details from the full conversation (all messages + new assistant reply)
-  const fullConversation = [
-    ...messages,
-    { role: "assistant", content: assistantMessage },
-  ];
-  const leadDetails = extractLeadDetails(fullConversation);
-
-  if (leadDetails.email && leadDetails.name) {
-    await syncHubSpotContact(env.HUBSPOT_ACCESS_TOKEN, leadDetails);
-
-    if (isQualifiedLead(fullConversation)) {
-      await createHubSpotAppointment(env.HUBSPOT_ACCESS_TOKEN, leadDetails);
-    }
-  }
-
-  return new Response(JSON.stringify({ response: assistantMessage }), {
-    status: 200,
-    headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
-  });
 }
 
 // ---------------------------------------------------------------------------
