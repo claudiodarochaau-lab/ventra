@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Managed Coffee Solution for Australian Businesses | VENTRA</title>
-  <meta name="description" content="Ventra delivers premium managed coffee — commercial-grade machines, specialty beans, full maintenance — under one monthly subscription. No capital outlay. No overhead. It simply works.">
-  <link rel="icon" type="image/svg+xml" href="V - Black BG_300px.svg">
+  <title>Managed Coffee for Higher Education Campuses | VENTRA</title>
+  <meta name="description" content="Ventra's two-machine campus model gives staff complimentary coffee and students a tap-to-pay option that offsets your costs. One managed agreement. Zero operational overhead.">
+  <link rel="canonical" href="/higher-education">
+  <link rel="icon" type="image/svg+xml" href="../V - Black BG_300px.svg">
   <link rel="alternate icon" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -259,7 +260,7 @@
       z-index: 2;
     }
 
-    /* ─── IMAGE FEATURE SECTIONS ── */
+    /* ─── IMAGE FEATURE ── */
     .img-feature {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -297,51 +298,6 @@
     .img-feature-content p:last-child { margin-bottom: 0; }
     .img-feature-content a { font-size: 13px; font-weight: 600; color: var(--silver); text-decoration: none; }
     .img-feature-content a:hover { color: var(--white); }
-
-    /* ─── LATTE STEAM CTA ── */
-    .latte-cta {
-      position: relative;
-      overflow: hidden;
-      padding: 80px 32px;
-      background: var(--black);
-      color: var(--white);
-    }
-
-    .latte-cta-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-
-    .latte-cta-bg picture,
-    .latte-cta-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-    }
-
-    .latte-cta-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background: rgba(0,0,0,0.72);
-    }
-
-    .latte-cta-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .latte-cta-inner h2 { font-size: clamp(22px,2.5vw,32px); color: var(--white); margin: 0; }
 
     @media (max-width: 860px) {
       .img-feature { grid-template-columns: 1fr; min-height: auto; }
@@ -1229,17 +1185,17 @@
   <!-- ─── NAV ──────────────────────────────────────────── -->
   <nav id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo" aria-label="Ventra Coffee home">
-        <img src="logo-dark.svg" style="height:99px;width:auto;" alt="Ventra Coffee">
+      <a href="/" class="nav-logo" aria-label="Ventra Coffee home">
+        <img src="../logo-dark.svg" style="height:99px;width:auto;" alt="Ventra Coffee">
       </a>
       <ul class="nav-links">
-        <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="/higher-education">Higher Education</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/#how-it-works">How it works</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/higher-education" style="color:var(--white);">Higher Education</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
       </ul>
-      <a href="#contact" class="btn btn-dark nav-cta">Get a Quote</a>
+      <a href="/#contact" class="btn btn-dark nav-cta">Get a Quote</a>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
         <span></span>
         <span></span>
@@ -1248,14 +1204,14 @@
     </div>
     <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
       <ul class="nav-mobile-links">
-        <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="/higher-education">Higher Education</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/#how-it-works">How it works</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/higher-education" style="color:var(--white);">Higher Education</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
       </ul>
       <div class="nav-mobile-cta">
-        <a href="#contact" class="btn btn-dark">Get a Quote</a>
+        <a href="/#contact" class="btn btn-dark">Get a Quote</a>
       </div>
     </div>
   </nav>
@@ -1264,18 +1220,18 @@
   <section id="hero">
     <div class="hero-bg" aria-hidden="true">
       <picture>
-        <source srcset="assets/images/machine-hero.webp" type="image/webp">
-        <img src="Ventra%20photos/Gemini_Generated_Image_6iwk2h6iwk2h6iwk.png" alt="" width="1400" height="763" loading="eager">
+        <source srcset="../assets/images/machine-campus-corridor.webp" type="image/webp">
+        <img src="../Ventra%20photos/Gemini_Generated_Image_7y0pdn7y0pdn7y0p.png" alt="" width="1400" height="763" loading="eager">
       </picture>
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-inner">
-      <h1 class="hero-headline">VENTRA</h1>
-      <p class="hero-tagline">Australia's managed coffee partner.</p>
-      <p class="hero-sub">Premium specialty coffee. Fully managed. One monthly subscription.<br>Your team drinks well. You never think about it.</p>
+      <h1 class="hero-headline">VENTRA for Higher Education</h1>
+      <p class="hero-tagline">The campus coffee model that pays for itself.</p>
+      <p class="hero-sub">Your staff deserve complimentary coffee that signals the institution cares. Your students deserve an on-campus experience worth staying for. Your finance team deserves a cost that justifies itself on a spreadsheet.<br><br>Ventra delivers all three — under one managed agreement, with no operational overhead.</p>
       <div class="hero-cta-row">
-        <a href="#contact" class="btn btn-dark">Get a Quote</a>
-        <a href="#how-it-works" class="hero-cta-secondary">See how it works →</a>
+        <a href="#contact" class="btn btn-dark">Get a Campus Quote</a>
+        <a href="#pricing" class="hero-cta-secondary">See the numbers →</a>
       </div>
       <hr class="hero-rule">
       <div class="hero-stats">
@@ -1315,20 +1271,38 @@
     <div class="vp-strip-inner">
       <div class="vp-cards">
         <div class="vp-card">
-          <p class="vp-card-label">For Organisations</p>
-          <h2 class="vp-card-title">One invoice. Zero overhead.</h2>
-          <p class="vp-card-body">Ventra manages the machine, the maintenance, and the beans — everything. Your team gets outstanding coffee on day one. You get a single monthly invoice and nothing else to think about. No procurement. No service calls. No stock checks.</p>
+          <p class="vp-card-label">For Campus Operations</p>
+          <h2 class="vp-card-title">One invoice. Nothing to manage.</h2>
+          <p class="vp-card-body">Ventra handles the machines, the beans, the maintenance, and the replenishment — across both staff and student areas. Your ops team doesn't file a service request, manage a supplier, or think about coffee. One invoice per campus, every month. That's the entire arrangement.</p>
           <a href="#how-it-works" class="vp-card-link">How it works →</a>
         </div>
         <div class="vp-card">
-          <p class="vp-card-label">For Venue Operators</p>
-          <h2 class="vp-card-title">Turn every cup into revenue.</h2>
-          <p class="vp-card-body">Add a contactless tap-to-pay option and your machine starts paying for itself. Revenue from every transaction flows directly to you — offsetting the monthly cost. At volume, premium managed coffee can be effectively cost-neutral.</p>
+          <p class="vp-card-label">For Student Experience Teams</p>
+          <h2 class="vp-card-title">Students pay. Revenue goes to you.</h2>
+          <p class="vp-card-body">A contactless tap-to-pay machine in a high-traffic student area generates revenue that flows directly to your institution — Ventra takes no cut. At 300 enrolled students with conservative daily uptake, the student machine is effectively self-funding. At 500+, it generates surplus revenue.</p>
           <a href="#pricing" class="vp-card-link">See the numbers →</a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ─── STAFF & STUDENT AMENITY ─────────────────────── -->
+  <div class="img-feature">
+    <div class="img-feature-media">
+      <picture>
+        <source srcset="../assets/images/machine-office-counter.webp" type="image/webp">
+        <img src="../Ventra%20photos/Gemini_Generated_Image_eftv4qeftv4qeftv.png" alt="Ventra staff and student coffee machines at a campus office counter" width="1400" height="763" loading="lazy">
+      </picture>
+    </div>
+    <div class="img-feature-content">
+      <p class="section-label">The Model</p>
+      <h2>Two machines.<br>One agreement.<br>One invoice.</h2>
+      <p>One premium machine for your staff — complimentary, fully managed, a visible signal that the institution invests in its people.</p>
+      <p>One student-facing machine with contactless payments — generating revenue that flows directly to your institution, offsetting most or all of the cost.</p>
+      <br>
+      <a href="#contact">Get a Campus Quote →</a>
+    </div>
+  </div>
 
   <!-- ─── WHY VENTRA ───────────────────────────────────── -->
   <section id="why-ventra">
@@ -1345,12 +1319,12 @@
           <p class="pillar-body">If something needs attention, we're on-site within 48 hours. Not four days. Not a week.</p>
         </div>
         <div class="pillar">
-          <h3 class="pillar-heading">Auto-replenishment</h3>
-          <p class="pillar-body">Beans, consumables, and cleaning supplies arrive on schedule. You never run out.</p>
+          <h3 class="pillar-heading">Census-date proof replenishment</h3>
+          <p class="pillar-body">Beans and consumables auto-replenish to your semester schedule. Peak enrolment periods don't catch you short.</p>
         </div>
         <div class="pillar">
-          <h3 class="pillar-heading">One partner, one invoice</h3>
-          <p class="pillar-body">Machine, beans, maintenance — one supplier, one monthly line item. Nothing else.</p>
+          <h3 class="pillar-heading">CRICOS-aware scheduling</h3>
+          <p class="pillar-body">We understand intake cycles, semester breaks, and the operational rhythm of a registered higher education provider. Servicing and replenishment are scheduled around your calendar, not ours.</p>
         </div>
         <div class="pillar">
           <h3 class="pillar-heading">Optional: tap-and-drink revenue</h3>
@@ -1364,16 +1338,6 @@
     </div>
   </section>
 
-  <!-- ─── SECTOR CALLOUT ───────────────────────────────── -->
-  <section id="sector-callout">
-    <div class="sector-callout-inner">
-      <div class="sector-callout-copy">
-        <h2 class="sector-callout-title">Built for campuses. Ready for any organisation.</h2>
-        <p class="sector-callout-body">Ventra was designed for the operational demands of higher education — where coffee needs to work across two distinct populations: staff who expect it complimentary, and students who'll pay for it. That model works just as well in a corporate HQ, a medical practice, or a multi-site operation.</p>
-      </div>
-      <a href="/higher-education" class="btn btn-dark" style="flex-shrink:0;">Higher Education →</a>
-    </div>
-  </section>
 
   <!-- ─── HOW IT WORKS ──────────────────────────────────── -->
   <section id="how-it-works">
@@ -1489,62 +1453,19 @@
     </div>
   </section>
 
-  <!-- ─── IN YOUR WORKPLACE ───────────────────────────── -->
-  <div class="img-feature">
-    <div class="img-feature-media">
-      <picture>
-        <source srcset="assets/images/machine-office-person.webp" type="image/webp">
-        <img src="Ventra%20photos/Gemini_Generated_Image_gyocmigyocmigyoc.png" alt="Staff member using a Ventra coffee machine in a modern office" width="1400" height="763" loading="lazy">
-      </picture>
-    </div>
-    <div class="img-feature-content">
-      <p class="section-label">In Your Workplace</p>
-      <h2>Everything included.<br>Nothing to manage.</h2>
-      <p>From installation to daily replenishment, Ventra handles every part of your coffee service. Your team arrives to great coffee every morning. Your operations team doesn't file a single ticket.</p>
-      <p>One partner. One invoice. 24–48hr service guarantee if anything ever needs attention.</p>
-      <br>
-      <a href="#contact">Get a Quote →</a>
-    </div>
-  </div>
-
-  <!-- ─── CONTACTLESS PAYMENTS ─────────────────────────── -->
-  <div class="img-feature reverse">
-    <div class="img-feature-media">
-      <picture>
-        <source srcset="assets/images/machine-tap-to-pay.webp" type="image/webp">
-        <img src="Ventra%20photos/Gemini_Generated_Image_oro85boro85boro8.png" alt="Student tapping contactless payment on a Ventra coffee terminal" width="1400" height="763" loading="lazy">
-      </picture>
-    </div>
-    <div class="img-feature-content">
-      <p class="section-label">Tap-to-Drink</p>
-      <h2>Contactless payments.<br>Revenue back to you.</h2>
-      <p>Add a cashless payment terminal and every cup becomes a transaction. Students and visitors tap to pay — Visa, Mastercard, Apple Pay, Google Pay. The revenue flows directly to your institution. Ventra takes no cut.</p>
-      <p>At scale, the student machine can offset its own monthly cost entirely.</p>
-      <br>
-      <a href="/higher-education">See the numbers for your campus →</a>
-    </div>
-  </div>
-
   <!-- ─── 30-DAY TRIAL (secondary, lean) ──────────────── -->
-  <div class="latte-cta">
-    <div class="latte-cta-bg" aria-hidden="true">
-      <picture>
-        <source srcset="assets/images/machine-latte-steam.webp" type="image/webp">
-        <img src="Ventra%20photos/Gemini_Generated_Image_rq48uarq48uarq48.png" alt="" width="1400" height="763" loading="lazy">
-      </picture>
-    </div>
-    <div class="latte-cta-overlay" aria-hidden="true"></div>
-    <div class="latte-cta-inner">
-      <h2 class="section-title">Ready to try it? Start with 30 days. No commitment.</h2>
+  <section style="background:var(--black);color:var(--white);padding:64px 32px;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
+      <h2 class="section-title" style="font-size:clamp(22px,2.5vw,32px);color:var(--white);margin:0;">Ready to try it? Start with 30 days. No commitment.</h2>
       <a href="#contact" class="btn btn-dark" style="flex-shrink:0;">Start Your 30-Day Trial</a>
     </div>
-  </div>
+  </section>
 
   <!-- ─── CONTACT ───────────────────────────────────────── -->
   <section id="contact">
     <div class="contact-inner">
       <div class="contact-form-col">
-        <h2 class="section-title contact-title">Ready to remove coffee from your to-do list?</h2>
+        <h2 class="section-title contact-title">Ready to see the numbers for your campus?</h2>
         <script src="https://js-ap1.hsforms.net/forms/embed/442945735.js" defer></script>
         <div class="hs-form-frame" data-region="ap1" data-form-id="bf7f1301-db8d-4c1c-9710-d8d3b6ea26d8" data-portal-id="442945735"></div>
       </div>
@@ -1570,7 +1491,7 @@
   <footer id="footer">
     <div class="footer-inner">
       <div class="footer-left">
-        <img src="logo-dark.svg" style="height:85px;width:auto;display:block;" alt="Ventra Coffee">
+        <img src="../logo-dark.svg" style="height:85px;width:auto;display:block;" alt="Ventra Coffee">
         <p style="max-width:360px;">Australia's managed coffee partner. Premium specialty coffee, fully managed, one monthly subscription.</p>
         <p>Sydney &nbsp;·&nbsp; Melbourne</p>
       </div>
