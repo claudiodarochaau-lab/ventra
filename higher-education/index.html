@@ -227,11 +227,83 @@
       background: var(--black);
       color: var(--white);
       padding: 120px 32px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-bg picture,
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(to right, rgba(0,0,0,0.82) 50%, rgba(0,0,0,0.5) 100%);
     }
 
     .hero-inner {
       max-width: 1200px;
       margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ─── IMAGE FEATURE ── */
+    .img-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 480px;
+    }
+
+    .img-feature.reverse { direction: rtl; }
+    .img-feature.reverse > * { direction: ltr; }
+
+    .img-feature-media {
+      overflow: hidden;
+      background: #111;
+    }
+
+    .img-feature-media picture,
+    .img-feature-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .img-feature-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 56px;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .img-feature-content .section-label { color: var(--silver); }
+    .img-feature-content h2 { font-size: clamp(24px,3vw,36px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; color: var(--white); margin-bottom: 20px; }
+    .img-feature-content p { font-size: 15px; color: var(--mist); line-height: 1.75; margin-bottom: 12px; }
+    .img-feature-content p:last-child { margin-bottom: 0; }
+    .img-feature-content a { font-size: 13px; font-weight: 600; color: var(--silver); text-decoration: none; }
+    .img-feature-content a:hover { color: var(--white); }
+
+    @media (max-width: 860px) {
+      .img-feature { grid-template-columns: 1fr; min-height: auto; }
+      .img-feature-media { aspect-ratio: 16/9; }
+      .img-feature.reverse { direction: ltr; }
+      .img-feature-content { padding: 40px 28px; }
     }
 
     .hero-headline {
@@ -1146,6 +1218,13 @@
 
   <!-- ─── HERO ─────────────────────────────────────────── -->
   <section id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <picture>
+        <source srcset="../assets/images/machine-campus-corridor.webp" type="image/webp">
+        <img src="../Ventra%20photos/Gemini_Generated_Image_7y0pdn7y0pdn7y0p.png" alt="" width="1400" height="763" loading="eager">
+      </picture>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-inner">
       <h1 class="hero-headline">VENTRA for Higher Education</h1>
       <p class="hero-tagline">The campus coffee model that pays for itself.</p>
@@ -1206,6 +1285,24 @@
       </div>
     </div>
   </section>
+
+  <!-- ─── STAFF & STUDENT AMENITY ─────────────────────── -->
+  <div class="img-feature">
+    <div class="img-feature-media">
+      <picture>
+        <source srcset="../assets/images/machine-office-counter.webp" type="image/webp">
+        <img src="../Ventra%20photos/Gemini_Generated_Image_eftv4qeftv4qeftv.png" alt="Ventra staff and student coffee machines at a campus office counter" width="1400" height="763" loading="lazy">
+      </picture>
+    </div>
+    <div class="img-feature-content">
+      <p class="section-label">The Model</p>
+      <h2>Two machines.<br>One agreement.<br>One invoice.</h2>
+      <p>One premium machine for your staff — complimentary, fully managed, a visible signal that the institution invests in its people.</p>
+      <p>One student-facing machine with contactless payments — generating revenue that flows directly to your institution, offsetting most or all of the cost.</p>
+      <br>
+      <a href="#contact">Get a Campus Quote →</a>
+    </div>
+  </div>
 
   <!-- ─── WHY VENTRA ───────────────────────────────────── -->
   <section id="why-ventra">
