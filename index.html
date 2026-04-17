@@ -1581,15 +1581,25 @@
       }
     })();
   </script>
-  <script>
-  window.addEventListener('message', function(event) {
-    if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
-      gtag('event', 'form_submit', {
-        'form_name': 'hubspot_enquiry',
-        'page_location': window.location.href
-      });
-    }
-  });
+ <script>
+  var hsForm = document.querySelector('.hs-form-iframe');
+  if (hsForm) {
+    var observer = new MutationObserver(function() {
+      var iframe = document.querySelector('.hs-form-iframe');
+      if (iframe) {
+        try {
+          var doc = iframe.contentDocument || iframe.contentWindow.document;
+          if (doc.querySelector('.submitted-message')) {
+            gtag('event', 'form_submit', {
+              'form_name': 'hubspot_enquiry'
+            });
+            observer.disconnect();
+          }
+        } catch(e) {}
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
 </script>
 </body>
 </html>
