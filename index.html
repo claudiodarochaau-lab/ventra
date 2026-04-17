@@ -1581,5 +1581,15 @@
       }
     })();
   </script>
+  <script>
+  window.addEventListener('message', function(event) {
+    if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
+      gtag('event', 'form_submit', {
+        'form_name': 'hubspot_enquiry',
+        'page_location': window.location.href
+      });
+    }
+  });
+</script>
 </body>
 </html>
