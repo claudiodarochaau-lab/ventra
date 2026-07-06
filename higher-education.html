@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Managed Coffee for Higher Education Campuses | VENTRA</title>
-  <meta name="description" content="Ventra's two-machine campus model gives staff complimentary coffee and students a tap-to-pay option that offsets your costs. One agreement. Zero operational overhead. Built for private higher education.">
+  <meta name="description" content="Ventra's managed campus coffee service covers staff and students under one agreement - zero operational overhead, 24–48hr service guarantee, and a consumption model that can offset your cost.">
 
   <link rel="canonical" href="https://ventracoffee.com.au/higher-education">
   <style>
@@ -22,18 +22,39 @@
   --white:       #FFFFFF;
   --font-sans:   'Aptos', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
   --font-serif:  Georgia, 'Times New Roman', Times, serif;
+  --fw-bold:     700;
+  --fw-medium:   500;
+  --fw-regular:  400;
+  --fw-light:    300;
+  --fs-display:  clamp(2.25rem, 6vw, 4rem);
+  --fs-h1:       clamp(1.75rem, 4vw, 2.75rem);
+  --fs-h2:       clamp(1.375rem, 3vw, 2.25rem);
+  --fs-h3:       clamp(1rem, 2vw, 1.25rem);
+  --fs-body:     1rem;
+  --fs-body-sm:  0.9375rem;
+  --fs-ui:       0.875rem;
+  --fs-caption:  0.75rem;
+  --fs-label:    0.6875rem;
+  --lh-display:  1.1;
+  --lh-heading:  1.15;
+  --lh-body:     1.7;
+  --ls-tight:   -0.02em;
+  --ls-ui:       0.02em;
+  --ls-btn:      0.05em;
+  --ls-label:    0.15em;
+  --ls-caps:     0.12em;
   --max-width:   1200px;
   --section-pad: 5rem 1.5rem;
 }
 
 html { scroll-behavior: smooth; }
-body { font-family: var(--font-sans); font-size: 1rem; line-height: 1.65; color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-sans); font-size: var(--fs-body); line-height: var(--lh-body); color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; }
 
-.label { display: block; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--silver); margin-bottom: 0.75rem; }
-h1, h2, h3, h4 { font-family: var(--font-sans); font-weight: 700; line-height: 1.15; }
-h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
-h2 { font-size: clamp(1.5rem, 3.5vw, 2.25rem); }
-h3 { font-size: clamp(1.125rem, 2.5vw, 1.5rem); }
+.label { display: block; font-size: var(--fs-label); font-weight: var(--fw-medium); letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--silver); margin-bottom: 0.75rem; }
+h1, h2, h3, h4 { font-family: var(--font-sans); font-weight: var(--fw-bold); line-height: var(--lh-heading); }
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
 p { margin-bottom: 1rem; }
 p:last-child { margin-bottom: 0; }
 .pull-quote { font-family: var(--font-serif); font-style: italic; font-size: clamp(1.1rem, 2vw, 1.35rem); line-height: 1.5; color: var(--slate); }
@@ -46,7 +67,7 @@ section { padding: var(--section-pad); }
 .nav-inner { max-width: 1200px; margin: 0 auto; height: 108px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .nav-logo { flex-shrink: 0; display: flex; align-items: center; }
 .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-.nav-links a { font-size: 14px; font-weight: 600; color: var(--silver); text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s ease; }
+.nav-links a { font-size: var(--fs-ui); font-weight: var(--fw-medium); color: var(--silver); text-decoration: none; letter-spacing: var(--ls-ui); transition: color 0.2s ease; }
 .nav-links a:hover, .nav-links a.active { color: var(--white); }
 .nav-cta { flex-shrink: 0; }
 .nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px 4px; flex-shrink: 0; z-index: 101; }
@@ -57,13 +78,13 @@ section { padding: var(--section-pad); }
 .nav-mobile { display: none; position: fixed; top: 108px; left: 0; right: 0; background: #0D0D0D; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; padding: 8px 0 28px; z-index: 99; box-shadow: 0 12px 32px rgba(0,0,0,0.6); }
 .nav-mobile.open { display: block; }
 .nav-mobile-links { list-style: none; margin-bottom: 24px; }
-.nav-mobile-links li a { display: block; font-size: 17px; font-weight: 600; color: var(--silver); text-decoration: none; padding: 16px 28px; border-bottom: 1px solid #1a1a1a; letter-spacing: 0.01em; transition: color 0.2s ease; }
+.nav-mobile-links li a { display: block; font-size: 1.0625rem; font-weight: var(--fw-medium); color: var(--silver); text-decoration: none; padding: 16px 28px; border-bottom: 1px solid #1a1a1a; letter-spacing: var(--ls-ui); transition: color 0.2s ease; }
 .nav-mobile-links li:last-child a { border-bottom: none; }
 .nav-mobile-links li a:hover { color: var(--white); }
 .nav-mobile-cta { padding: 0 28px; }
 
 /* ── BUTTONS ── */
-.btn { display: inline-block; font-family: var(--font-sans); font-weight: 700; font-size: 0.875rem; letter-spacing: 0.06em; text-decoration: none; padding: 0.85rem 2rem; border-radius: 3px; transition: background 0.2s, color 0.2s; cursor: pointer; border: none; }
+.btn { display: inline-block; font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: var(--fs-ui); letter-spacing: var(--ls-btn); text-decoration: none; padding: 0.85rem 2rem; border-radius: 3px; transition: background 0.2s, color 0.2s; cursor: pointer; border: none; }
 .btn-primary { background: var(--white); color: var(--black); }
 .btn-primary:hover { background: var(--pearl); }
 .btn-dark { background: var(--white); color: var(--black); }
@@ -79,7 +100,7 @@ section { padding: var(--section-pad); }
 .hero-image picture, .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(13,13,13,0.85) 45%, rgba(13,13,13,0.45) 100%); }
 .hero-content { position: relative; z-index: 2; max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; width: 100%; }
-.hero-headline { font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 700; letter-spacing: 0.04em; color: var(--white); margin-bottom: 0.5rem; }
+.hero-headline { font-size: var(--fs-display); font-weight: var(--fw-bold); letter-spacing: var(--ls-tight); color: var(--white); margin-bottom: 0.5rem; }
 .hero-tagline { font-family: var(--font-serif); font-style: italic; font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: var(--silver); margin-bottom: 1.5rem; }
 .hero-body { font-size: clamp(1rem, 1.8vw, 1.15rem); color: var(--mist); max-width: 500px; margin-bottom: 2.5rem; line-height: 1.7; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; }
@@ -114,13 +135,13 @@ section { padding: var(--section-pad); }
 .machine-card ul { list-style: none; margin: 1rem 0; padding: 0; }
 .machine-card ul li { font-size: 0.875rem; color: var(--stone); padding: 0.35rem 0 0.35rem 1.25rem; position: relative; border-bottom: 1px solid var(--slate); }
 .machine-card ul li:last-child { border-bottom: none; }
-.machine-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--silver); }
+.machine-card ul li::before { content: '-'; position: absolute; left: 0; color: var(--silver); }
 .machine-note { font-size: 0.85rem; color: var(--silver); font-style: italic; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--slate); }
 
 /* ── PILLARS ── */
 .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
 .pillar { padding: 1.5rem; background: var(--graphite); border-radius: 4px; border-left: 3px solid var(--slate); }
-.pillar h3 { font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+.pillar h3 { font-size: var(--fs-h3); font-weight: var(--fw-bold); color: var(--white); margin-bottom: 0.5rem; }
 .pillar p { font-size: 0.875rem; color: var(--stone); margin: 0; }
 
 /* ── REVENUE TABLE ── */
@@ -151,11 +172,11 @@ section { padding: var(--section-pad); }
 /* ── FOOTER ── */
 .site-footer { background: var(--black); color: var(--stone); padding: 3rem 1.5rem 2rem; border-top: 1px solid var(--slate); }
 .footer-inner { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; margin-bottom: 2.5rem; }
-.footer-tagline { font-family: var(--font-serif); font-style: italic; font-size: 0.9rem; color: var(--stone); }
+.footer-tagline { font-family: var(--font-serif); font-style: italic; font-size: var(--fs-ui); font-weight: var(--fw-light); color: var(--stone); }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; list-style: none; align-items: flex-start; padding-top: 0.2rem; }
-.footer-nav a { font-size: 0.85rem; color: var(--stone); text-decoration: none; transition: color 0.2s; }
+.footer-nav a { font-size: var(--fs-ui); font-weight: var(--fw-light); color: var(--stone); text-decoration: none; transition: color 0.2s; }
 .footer-nav a:hover { color: var(--white); }
-.footer-legal { max-width: var(--max-width); margin: 0 auto; padding-top: 1.5rem; border-top: 1px solid var(--slate); font-size: 0.775rem; color: var(--stone); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; }
+.footer-legal { max-width: var(--max-width); margin: 0 auto; padding-top: 1.5rem; border-top: 1px solid var(--slate); font-size: var(--fs-caption); font-weight: var(--fw-light); color: var(--stone); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
@@ -187,7 +208,6 @@ section { padding: var(--section-pad); }
       </a>
       <ul class="nav-links">
         <li><a href="/#how-it-works">How it works</a></li>
-        <li><a href="/#pricing">Pricing</a></li>
         <li><a href="/higher-education" class="active">Higher Education</a></li>
         <li><a href="/#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -202,7 +222,6 @@ section { padding: var(--section-pad); }
     <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
       <ul class="nav-mobile-links">
         <li><a href="/#how-it-works">How it works</a></li>
-        <li><a href="/#pricing">Pricing</a></li>
         <li><a href="/higher-education">Higher Education</a></li>
         <li><a href="/#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -238,11 +257,10 @@ section { padding: var(--section-pad); }
         Your staff deserve complimentary coffee that signals the institution cares.
         Your students deserve an on-campus experience worth staying for.
         And your finance team deserves a cost that justifies itself on a spreadsheet.<br><br>
-        Ventra delivers all three — under one managed agreement, with no operational overhead.
+        Ventra delivers all three - under one managed agreement, with no operational overhead.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">Get a Campus Quote</a>
-        <a href="#numbers" class="text-link">See the numbers →</a>
       </div>
     </div>
 
@@ -258,17 +276,17 @@ section { padding: var(--section-pad); }
       <br>
       <p>
         Private higher education providers are navigating a tighter market. Enrolment pipelines are
-        under pressure. Student retention is the primary commercial lever — not acquisition. In that
+        under pressure. Student retention is the primary commercial lever - not acquisition. In that
         environment, the quality of the on-campus experience is a retention signal students notice
         every day.
       </p>
       <p>
         A mediocre pod machine in the common room tells students one thing. A commercial-grade machine
-        with specialty coffee — and the option to tap and pay — tells them something different.
+        with specialty coffee - and the option to tap and pay - tells them something different.
       </p>
       <p>
         Staff coffee is an employee experience signal. Student coffee is an amenity that generates
-        revenue. Ventra is the only managed coffee partner that addresses both — in one agreement.
+        revenue. Ventra is the only managed coffee partner that addresses both - in one agreement.
       </p>
 
     </div>
@@ -292,13 +310,9 @@ section { padding: var(--section-pad); }
 
     <div class="image-feature-content">
       <span class="label">The Model</span>
-      <h2 id="model-headline">Two machines.<br>One agreement.<br>One invoice.</h2>
-      <p>Every Ventra campus deployment starts here.</p>
-      <p>
-        One premium machine for your staff — complimentary, fully managed, a visible EX signal.
-        One student-facing machine with contactless payments — generating revenue that flows
-        directly to your institution, offsetting most or all of the cost.
-      </p>
+      <h2 id="model-headline">One agreement.<br>One invoice.<br>Designed for your campus.</h2>
+      <p>Every Ventra campus solution is designed from the ground up - machine count, placement, and commercial structure determined by your campus size, utilisation profile, and objectives.</p>
+      <p>Where campuses serve both staff and students, Ventra can structure separate solutions for each population - complimentary for staff, consumption-based for students - under a single agreement and a single invoice. The right configuration depends on your campus. We'll model it with you.</p>
       <p style="color: var(--stone); font-size: 0.875rem;">
         One invoice. One partner. 24–48hr service guarantee.
       </p>
@@ -321,11 +335,11 @@ section { padding: var(--section-pad); }
           <p>
             A commercial-grade machine in your staff common area, fully managed by Ventra.
             Specialty coffee, ready all day. Complimentary for every staff member. Your ops team
-            doesn't manage it — Ventra handles everything.
+            doesn't manage it - Ventra handles everything.
           </p>
           <ul>
             <li>Commercial-grade bean-to-cup machine, sized to your staff headcount</li>
-            <li>Curated specialty roasts — auto-replenished to your schedule</li>
+            <li>Curated specialty roasts - auto-replenished to your schedule</li>
             <li>Full maintenance and servicing</li>
             <li>24–48hr service response guarantee</li>
             <li>One line item on your monthly invoice</li>
@@ -340,22 +354,22 @@ section { padding: var(--section-pad); }
           <span class="label">For Your Students</span>
           <h3>Tap to pay. Revenue to you.</h3>
           <p>
-            A second machine in a high-traffic student area — common room, library entrance,
-            reception corridor — with a contactless cashless payment terminal. Students tap and go.
+            A second machine in a high-traffic student area - common room, library entrance,
+            reception corridor - with a contactless cashless payment terminal. Students tap and go.
             Every transaction generates revenue that flows directly to your institution.
             Ventra takes no cut.
           </p>
           <ul>
             <li>Commercial-grade bean-to-cup machine, sized to your student population</li>
             <li>Contactless tap-to-pay terminal (Visa, Mastercard, Apple Pay, Google Pay)</li>
-            <li>Curated commercial specialty beans — auto-replenished</li>
+            <li>Curated commercial specialty beans - auto-replenished</li>
             <li>Real-time transaction reporting</li>
             <li>Full maintenance and servicing</li>
             <li>24–48hr service response guarantee</li>
             <li>One line item on your monthly invoice (separate from staff machine)</li>
           </ul>
           <p class="machine-note">
-            You set the price per cup. Every campus is modelled individually — we'll show you the
+            You set the price per cup. Every campus is modelled individually - we'll show you the
             numbers for your student population before you commit to anything.
           </p>
         </div>
@@ -365,65 +379,20 @@ section { padding: var(--section-pad); }
   </section>
 
 
-  <!-- ===================== REVENUE OFFSET MODEL ===================== -->
-  <section id="numbers" class="section-dark" aria-labelledby="numbers-headline">
-    <div class="container">
+  <!-- ===================== CAMPUS MODEL ===================== -->
+  <section class="section-dark" aria-labelledby="numbers-headline">
+    <div class="container" style="max-width: 780px;">
 
       <span class="label">The Numbers</span>
       <h2 id="numbers-headline">What does cost-neutral actually look like?</h2>
       <br>
       <p>
-        The model below uses conservative assumptions: 15% of enrolled students purchasing once
-        per day, at a standard price point, across 22 operating days per month. Your campus may
-        perform above or below this — we'll build your specific model together.
+        We build a campus-specific revenue model before any agreement is signed - incorporating
+        your enrolled population, projected utilisation, and cup price point. The model is yours
+        to interrogate before you commit to anything.
       </p>
-
-      <div class="revenue-table-wrap">
-        <table class="revenue-table" aria-label="Revenue offset by campus size">
-          <thead>
-            <tr>
-              <th>Enrolled Students</th>
-              <th>Est. Monthly Student Revenue</th>
-              <th>Net Cost After Offset</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>150 students</td>
-              <td>~$1,485</td>
-              <td>Partial offset — see your quote</td>
-            </tr>
-            <tr>
-              <td>300 students</td>
-              <td>~$2,970</td>
-              <td class="highlight">Effectively cost-neutral</td>
-            </tr>
-            <tr>
-              <td>500 students</td>
-              <td>~$4,950</td>
-              <td class="highlight">Net positive to your institution</td>
-            </tr>
-            <tr>
-              <td>700+ students</td>
-              <td>~$6,900+</td>
-              <td class="highlight">Meaningful revenue surplus</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="table-note">
-          Figures are illustrative. Based on 15% daily uptake at a standard cup price, 22 operating
-          days/month. Ventra will model your specific campus before any agreement is signed.
-        </p>
-      </div>
-
-      <div class="quote-block">
-        <p class="pull-quote">
-          "At 300 enrolled students, the student machine effectively pays for itself.
-          At 500+, it generates surplus revenue for the institution."
-        </p>
-      </div>
-
-      <a href="#contact" class="btn btn-primary">Model your campus →</a>
+      <br>
+      <a href="#contact" class="btn btn-primary">Request a campus model →</a>
 
     </div>
   </section>
@@ -441,22 +410,21 @@ section { padding: var(--section-pad); }
         <div class="pillar">
           <h3>Sector expertise, not a generic pitch</h3>
           <p>
-            Ventra was built specifically for Australian private higher education. We understand
+            Ventra was built specifically for Australian higher education. We understand
             CRICOS obligations, semester cycles, student demographic mix, and the operational
             pressure your teams are already under.
           </p>
         </div>
 
         <div class="pillar">
-          <h3>The only model that generates revenue, not just cost</h3>
+          <h3>A model that can generate revenue, not just cost</h3>
           <p>
-            No competitor offers a student-facing payment model where revenue flows directly to
-            the institution. That fundamentally changes the conversation from procurement to investment.
+            Where a consumption model is in scope, revenue from student or visitor transactions flows directly to your institution. Ventra takes no cut of that revenue.
           </p>
         </div>
 
         <div class="pillar">
-          <h3>Zero cognitive overhead — genuinely</h3>
+          <h3>Zero cognitive overhead - genuinely</h3>
           <p>
             One invoice per campus. One partner. 24–48hr SLA. Auto-replenishment. No maintenance
             requests. No bean suppliers to manage. For an ops team already managing compliance,
@@ -467,7 +435,7 @@ section { padding: var(--section-pad); }
         <div class="pillar">
           <h3>A 36-month partnership, not a vending contract</h3>
           <p>
-            Competitors sell machine hire. Ventra sells a managed outcome — with accountability
+            Competitors sell machine hire. Ventra sells a managed outcome - with accountability
             on both sides. The commitment is what makes the SLAs and revenue model work.
           </p>
         </div>
@@ -489,16 +457,14 @@ section { padding: var(--section-pad); }
         <div class="objection">
           <p class="objection-q">"What if students don't use it enough?"</p>
           <p class="objection-a">
-            Our conservative model is built on 15% daily uptake. We work with you to drive
-            utilisation through machine placement, signage strategy, and cup pricing guidance.
-            Most campuses exceed 15% within 60 days of installation.
+            Utilisation projections are campus-specific. We'll show you a conservative model before you commit, and work with you on machine placement and pricing to drive uptake from day one.
           </p>
         </div>
 
         <div class="objection">
           <p class="objection-q">"36 months is a long commitment."</p>
           <p class="objection-a">
-            The 36-month term is what enables the full managed service — guaranteed SLAs,
+            The 36-month term is what enables the full managed service - guaranteed SLAs,
             proactive replenishment, and the revenue model. A no-commitment arrangement means
             no accountability. We stand behind our service because we're committed to your campus.
           </p>
@@ -508,7 +474,7 @@ section { padding: var(--section-pad); }
           <p class="objection-q">"Is this really worth it for student retention?"</p>
           <p class="objection-a">
             Coffee is a daily, visible signal. In a competitive market where students are choosing
-            between providers, the quality of on-campus life matters — and it's measurable.
+            between providers, the quality of on-campus life matters - and it's measurable.
             We provide transaction data so you can see utilisation and make the case internally.
           </p>
         </div>
@@ -525,9 +491,7 @@ section { padding: var(--section-pad); }
         <span class="label" style="display:inline-block; margin-bottom: 0.75rem;">Hesitant?</span>
         <h2 id="trial-headline">Start with a 30-day trial.</h2>
         <p>
-          Not ready to commit to a full 36-month agreement? We offer a 30-day proof-of-concept
-          trial for campuses that want to see the model in action before signing.
-          One machine, your campus, 30 days.
+          We install a machine sized to your campus. Your team experiences the full service - the coffee, the replenishment, the maintenance response - all of it. No long-term commitment until you have seen it work.
         </p>
         <p style="color: var(--stone); font-size: 0.9rem;">
           Most campuses that run a trial convert to a full agreement. You'll see why.
@@ -548,7 +512,7 @@ section { padding: var(--section-pad); }
       <br>
       <p>
         Tell us your campus size, staff headcount, and enrolled student population.
-        We'll build a revenue offset model and put together a tailored quote —
+        We'll build a revenue offset model and put together a tailored quote -
         no obligation, within 24 hours.
       </p>
       <br>
@@ -568,14 +532,15 @@ section { padding: var(--section-pad); }
     <div class="footer-inner">
 
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo" aria-label="Ventra Coffee">VENTRA</a>
+        <a href="/" class="nav-logo" aria-label="Ventra Coffee">
+          <img src="logo-dark.svg" style="height:85px;width:auto;display:block;" alt="Ventra Coffee">
+        </a>
         <p class="footer-tagline">Australia's managed coffee partner.</p>
       </div>
 
       <ul class="footer-nav" role="list">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#how-it-works">How It Works</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
         <li><a href="higher-education.html">Higher Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>

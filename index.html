@@ -4,12 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Managed Coffee Solution for Australian Businesses | VENTRA</title>
-  <meta name="description" content="Ventra delivers premium managed coffee — commercial-grade machines, specialty beans, full maintenance — under one monthly subscription. No capital outlay. No overhead. It simply works.">
+  <meta name="description" content="Ventra delivers premium managed coffee - commercial-grade machines, specialty beans, full maintenance - under one monthly subscription. No capital outlay. No overhead. It simply works.">
   <link rel="icon" type="image/svg+xml" href="V - Black BG_300px.svg">
   <link rel="alternate icon" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GQNVWTN50D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GQNVWTN50D');
+</script>
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -24,6 +31,29 @@
       --mist: #E8E8E4;
       --graphite: #3D3D3A;
       --footer-bg: #0D0D0D;
+      --font-sans:   'Aptos', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      --font-serif:  Georgia, 'Times New Roman', Times, serif;
+      --fw-bold:     700;
+      --fw-medium:   500;
+      --fw-regular:  400;
+      --fw-light:    300;
+      --fs-display:  clamp(2.25rem, 6vw, 4rem);
+      --fs-h1:       clamp(1.75rem, 4vw, 2.75rem);
+      --fs-h2:       clamp(1.375rem, 3vw, 2.25rem);
+      --fs-h3:       clamp(1rem, 2vw, 1.25rem);
+      --fs-body:     1rem;
+      --fs-body-sm:  0.9375rem;
+      --fs-ui:       0.875rem;
+      --fs-caption:  0.75rem;
+      --fs-label:    0.6875rem;
+      --lh-display:  1.1;
+      --lh-heading:  1.15;
+      --lh-body:     1.7;
+      --ls-tight:   -0.02em;
+      --ls-ui:       0.02em;
+      --ls-btn:      0.05em;
+      --ls-label:    0.15em;
+      --ls-caps:     0.12em;
     }
 
     html {
@@ -31,10 +61,10 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.75;
+      font-family: var(--font-sans);
+      font-weight: var(--fw-regular);
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
       color: var(--black);
       background: var(--white);
     }
@@ -47,26 +77,26 @@
     }
 
     .section-label {
-      font-size: 10px;
-      font-weight: 600;
+      font-size: var(--fs-label);
+      font-weight: var(--fw-medium);
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: var(--ls-label);
       color: var(--silver);
       margin-bottom: 16px;
     }
 
     .section-title {
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
+      font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-tight);
+      line-height: var(--lh-heading);
     }
 
     .btn {
       display: inline-block;
-      font-family: 'Poppins', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.02em;
+      font-family: var(--font-sans);
+      font-size: var(--fs-ui);
+      font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-btn);
       text-decoration: none;
       padding: 13px 28px;
       border: none;
@@ -123,11 +153,11 @@
     }
 
     .nav-links a {
-      font-size: 14px;
-      font-weight: 600;
+      font-size: var(--fs-ui);
+      font-weight: var(--fw-medium);
       color: var(--silver);
       text-decoration: none;
-      letter-spacing: 0.02em;
+      letter-spacing: var(--ls-ui);
       transition: color 0.2s ease;
     }
 
@@ -199,13 +229,13 @@
 
     .nav-mobile-links li a {
       display: block;
-      font-size: 17px;
-      font-weight: 600;
+      font-size: 1.0625rem;
+      font-weight: var(--fw-medium);
       color: var(--silver);
       text-decoration: none;
       padding: 16px 28px;
       border-bottom: 1px solid #1a1a1a;
-      letter-spacing: 0.01em;
+      letter-spacing: var(--ls-ui);
       transition: color 0.2s ease;
     }
 
@@ -295,7 +325,7 @@
     .img-feature-content h2 { font-size: clamp(24px,3vw,36px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; color: var(--white); margin-bottom: 20px; }
     .img-feature-content p { font-size: 15px; color: var(--mist); line-height: 1.75; margin-bottom: 12px; }
     .img-feature-content p:last-child { margin-bottom: 0; }
-    .img-feature-content a { font-size: 13px; font-weight: 600; color: var(--silver); text-decoration: none; }
+    .img-feature-content a { font-size: 0.8125rem; font-weight: var(--fw-medium); color: var(--silver); text-decoration: none; }
     .img-feature-content a:hover { color: var(--white); }
 
     /* ─── LATTE STEAM CTA ── */
@@ -351,10 +381,10 @@
     }
 
     .hero-headline {
-      font-size: clamp(36px, 5vw, 64px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
+      font-size: var(--fs-display);
+      font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-tight);
+      line-height: var(--lh-display);
       max-width: 820px;
       margin-bottom: 28px;
     }
@@ -385,11 +415,11 @@
     }
 
     .hero-cta-secondary {
-      font-size: 14px;
-      font-weight: 600;
+      font-size: var(--fs-ui);
+      font-weight: var(--fw-medium);
       color: var(--silver);
       text-decoration: none;
-      letter-spacing: 0.02em;
+      letter-spacing: var(--ls-ui);
       transition: color 0.2s ease;
     }
 
@@ -464,10 +494,10 @@
     }
 
     .vp-card-label {
-      font-size: 10px;
-      font-weight: 700;
+      font-size: var(--fs-label);
+      font-weight: var(--fw-medium);
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: var(--ls-label);
       color: var(--silver);
       margin-bottom: 16px;
     }
@@ -490,11 +520,11 @@
     }
 
     .vp-card-link {
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 0.8125rem;
+      font-weight: var(--fw-medium);
       color: var(--black);
       text-decoration: none;
-      letter-spacing: 0.02em;
+      letter-spacing: var(--ls-ui);
       border-top: 1px solid var(--mist);
       padding-top: 18px;
       transition: opacity 0.2s ease;
@@ -530,9 +560,9 @@
     }
 
     .pillar-heading {
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
+      font-size: var(--fs-h3);
+      font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-tight);
       color: var(--white);
       margin-bottom: 10px;
     }
@@ -658,18 +688,18 @@
     }
 
     .step-number {
-      font-size: 11px;
-      font-weight: 700;
+      font-size: var(--fs-label);
+      font-weight: var(--fw-medium);
       color: var(--silver);
-      letter-spacing: 0.12em;
+      letter-spacing: var(--ls-caps);
       margin-bottom: 16px;
       display: block;
     }
 
     .step-title {
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
+      font-size: var(--fs-h3);
+      font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-tight);
       margin-bottom: 10px;
     }
 
@@ -719,10 +749,10 @@
     }
 
     .pricing-card-tier {
-      font-size: 10px;
-      font-weight: 700;
+      font-size: var(--fs-label);
+      font-weight: var(--fw-medium);
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: var(--ls-label);
       color: var(--silver);
       margin-bottom: 12px;
     }
@@ -736,8 +766,8 @@
     }
 
     .pricing-card-range {
-      font-size: 13px;
-      font-weight: 600;
+      font-size: var(--fs-caption);
+      font-weight: var(--fw-medium);
       color: var(--graphite);
       margin-bottom: 8px;
     }
@@ -784,11 +814,11 @@
     }
 
     .about-founder {
-      font-size: 13px;
-      font-weight: 600;
+      font-size: var(--fs-caption);
+      font-weight: var(--fw-medium);
       color: var(--silver);
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: var(--ls-caps);
       margin-bottom: 24px;
     }
 
@@ -822,7 +852,7 @@
     }
 
     .about-why-list li::before {
-      content: '—';
+      content: '-';
       position: absolute;
       left: 0;
       color: var(--silver);
@@ -870,17 +900,17 @@
     }
 
     .form-group label {
-      font-size: 12px;
-      font-weight: 600;
+      font-size: var(--fs-caption);
+      font-weight: var(--fw-medium);
       color: var(--silver);
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: var(--ls-caps);
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
-      font-family: 'Poppins', sans-serif;
+      font-family: var(--font-sans);
       font-size: 14px;
       font-weight: 400;
       background: rgba(255,255,255,0.06);
@@ -937,10 +967,10 @@
     }
 
     .contact-info-title {
-      font-size: 13px;
-      font-weight: 700;
+      font-size: var(--fs-caption);
+      font-weight: var(--fw-medium);
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: var(--ls-caps);
       color: var(--silver);
       margin-bottom: 20px;
     }
@@ -966,10 +996,10 @@
     }
 
     .contact-info-label {
-      font-size: 11px;
-      font-weight: 700;
+      font-size: var(--fs-label);
+      font-weight: var(--fw-medium);
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: var(--ls-caps);
       color: var(--silver);
       margin-bottom: 4px;
       display: block;
@@ -1000,6 +1030,7 @@
 
     .footer-left p {
       font-size: 13px;
+      font-weight: var(--fw-light);
       color: var(--silver);
       line-height: 1.6;
     }
@@ -1010,6 +1041,7 @@
 
     .footer-right p {
       font-size: 12px;
+      font-weight: var(--fw-light);
       color: var(--silver);
       line-height: 1.7;
     }
@@ -1123,7 +1155,6 @@
       #why-ventra,
       #sector-callout,
       #how-it-works,
-      #pricing,
       #about,
       #contact {
         padding-top: 72px;
@@ -1223,6 +1254,9 @@
       }
     }
   </style>
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-ap1.hs-scripts.com/442945735.js"></script>
+  <!-- End of HubSpot Embed Code -->
 </head>
 <body>
 
@@ -1234,7 +1268,6 @@
       </a>
       <ul class="nav-links">
         <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#pricing">Pricing</a></li>
         <li><a href="/higher-education">Higher Education</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -1249,7 +1282,6 @@
     <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
       <ul class="nav-mobile-links">
         <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#pricing">Pricing</a></li>
         <li><a href="/higher-education">Higher Education</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -1272,7 +1304,7 @@
     <div class="hero-inner">
       <h1 class="hero-headline">VENTRA</h1>
       <p class="hero-tagline">Australia's managed coffee partner.</p>
-      <p class="hero-sub">Premium specialty coffee. Fully managed. One monthly subscription.<br>Your team drinks well. You never think about it.</p>
+      <p class="hero-sub">Premium specialty coffee. Fully managed. One monthly subscription.<br>Your team drinks café quality coffee. You never think about it.</p>
       <div class="hero-cta-row">
         <a href="#contact" class="btn btn-dark">Get a Quote</a>
         <a href="#how-it-works" class="hero-cta-secondary">See how it works →</a>
@@ -1280,20 +1312,20 @@
       <hr class="hero-rule">
       <div class="hero-stats">
         <div class="hero-stat">
-          <span class="stat-value">36-month</span>
-          <span class="stat-label">contracted terms</span>
+          <span class="stat-value">100% managed</span>
+          <span class="stat-label">everything handled, end to end</span>
         </div>
         <div class="hero-stat">
-          <span class="stat-value">24–48hr</span>
-          <span class="stat-label">service SLA</span>
+          <span class="stat-value">Premium coffee</span>
+          <span class="stat-label">dialled in, not just delivered</span>
         </div>
         <div class="hero-stat">
-          <span class="stat-value">1 invoice</span>
-          <span class="stat-label">everything included</span>
+          <span class="stat-value">Zero capital required</span>
+          <span class="stat-label">hardware, beans, service - one monthly fee</span>
         </div>
         <div class="hero-stat">
-          <span class="stat-value">$0</span>
-          <span class="stat-label">capital outlay</span>
+          <span class="stat-value">On-site in 48hrs</span>
+          <span class="stat-label">our service response commitment</span>
         </div>
       </div>
     </div>
@@ -1301,31 +1333,19 @@
 
   <!-- ─── 30-DAY TRIAL (primary) ──────────────────────── -->
   <section id="trial" style="background:var(--black);color:var(--white);padding:80px 32px;">
-    <div style="max-width:1200px;margin:0 auto;">
-      <p class="section-label">Start with zero risk</p>
-      <h2 class="section-title" style="font-size:clamp(26px,3.5vw,40px);color:var(--white);margin-bottom:20px;max-width:640px;">Start with a 30-Day Trial. No Commitment Required.</h2>
-      <p style="font-size:15px;color:var(--silver);line-height:1.75;max-width:640px;margin-bottom:36px;">Not ready to commit? We install an Entry-tier machine at your site. Your team experiences the service — the coffee, the replenishment, the maintenance response — all of it. No long-term commitment until you have seen it work. Most organisations that trial convert to a full 36-month partnership. That is not an accident.</p>
-      <a href="#contact" class="btn btn-dark">Start Your 30-Day Trial</a>
-      <p style="font-size:13px;color:var(--silver);margin-top:20px;">Or contact us directly: <a href="mailto:sales@ventracoffee.com.au" style="color:var(--silver);">sales@ventracoffee.com.au</a> &nbsp;·&nbsp; +61 257 007 038</p>
-    </div>
-  </section>
-
-  <!-- ─── TWO VP STRIP ─────────────────────────────────── -->
-  <section id="vp-strip">
-    <div class="vp-strip-inner">
-      <div class="vp-cards">
-        <div class="vp-card">
-          <p class="vp-card-label">For Organisations</p>
-          <h2 class="vp-card-title">One invoice. Zero overhead.</h2>
-          <p class="vp-card-body">Ventra manages the machine, the maintenance, and the beans — everything. Your team gets outstanding coffee on day one. You get a single monthly invoice and nothing else to think about. No procurement. No service calls. No stock checks.</p>
-          <a href="#how-it-works" class="vp-card-link">How it works →</a>
-        </div>
-        <div class="vp-card">
-          <p class="vp-card-label">For Venue Operators</p>
-          <h2 class="vp-card-title">Turn every cup into revenue.</h2>
-          <p class="vp-card-body">Add a contactless tap-to-pay option and your machine starts paying for itself. Revenue from every transaction flows directly to you — offsetting the monthly cost. At volume, premium managed coffee can be effectively cost-neutral.</p>
-          <a href="#pricing" class="vp-card-link">See the numbers →</a>
-        </div>
+    <div style="max-width:1200px;margin:0 auto;display:flex;gap:48px;flex-wrap:wrap;align-items:flex-start;">
+      <div style="flex:1;min-width:280px;">
+        <p class="section-label">Start with zero risk</p>
+        <h2 class="section-title" style="font-size:clamp(26px,3.5vw,40px);color:var(--white);margin-bottom:20px;">Start with a 30-Day Trial. No Commitment Required.</h2>
+        <p style="font-size:15px;color:var(--silver);line-height:1.75;margin-bottom:36px;">We install a machine sized to your site. Your team experiences the full service - the coffee, the replenishment, the maintenance response - all of it. No long-term commitment until you have seen it work. Most organisations that trial convert to a full 36-month partnership. That is not an accident.</p>
+        <a href="#contact" class="btn btn-dark">Start Your 30-Day Trial</a>
+        <p style="font-size:13px;color:var(--silver);margin-top:20px;">Or contact us directly: <a href="mailto:sales@ventracoffee.com.au" style="color:var(--silver);">sales@ventracoffee.com.au</a> &nbsp;·&nbsp; +61 257 007 038</p>
+      </div>
+      <div class="vp-card" style="flex:1;min-width:280px;">
+        <p class="vp-card-label">For Organisations</p>
+        <h2 class="vp-card-title">One invoice. Zero overhead.</h2>
+        <p class="vp-card-body">Ventra manages the machine, the maintenance, and the beans - everything. Your team gets outstanding coffee on day one. You get a single monthly invoice and nothing else to think about. No procurement. No service calls. No stock checks.</p>
+        <a href="#how-it-works" class="vp-card-link">How it works →</a>
       </div>
     </div>
   </section>
@@ -1350,7 +1370,7 @@
         </div>
         <div class="pillar">
           <h3 class="pillar-heading">One partner, one invoice</h3>
-          <p class="pillar-body">Machine, beans, maintenance — one supplier, one monthly line item. Nothing else.</p>
+          <p class="pillar-body">Machine, beans, maintenance - one supplier, one monthly line item. Nothing else.</p>
         </div>
         <div class="pillar">
           <h3 class="pillar-heading">Optional: tap-and-drink revenue</h3>
@@ -1369,7 +1389,7 @@
     <div class="sector-callout-inner">
       <div class="sector-callout-copy">
         <h2 class="sector-callout-title">Built for campuses. Ready for any organisation.</h2>
-        <p class="sector-callout-body">Ventra was designed for the operational demands of higher education — where coffee needs to work across two distinct populations: staff who expect it complimentary, and students who'll pay for it. That model works just as well in a corporate HQ, a medical practice, or a multi-site operation.</p>
+        <p class="sector-callout-body">Ventra was built for organisations where coffee needs to work reliably across multiple locations and populations - without adding to anyone's plate. It started in education. It scales to any multi-site or high-demand environment.</p>
       </div>
       <a href="/higher-education" class="btn btn-dark" style="flex-shrink:0;">Higher Education →</a>
     </div>
@@ -1385,7 +1405,7 @@
         <div class="hiw-step">
           <span class="step-number">CHOOSE</span>
           <h3 class="step-title">Pick your setup.</h3>
-          <p class="step-body">Tell us your location, daily volume, and space. We'll recommend the right machine for your throughput — no upselling, no over-speccing.</p>
+          <p class="step-body">Tell us your location, daily volume, and space. We'll recommend the right machine for your throughput - no upselling, no over-speccing.</p>
         </div>
         <div class="hiw-step">
           <span class="step-number">INSTALL</span>
@@ -1395,7 +1415,7 @@
         <div class="hiw-step">
           <span class="step-number">REPLENISH</span>
           <h3 class="step-title">Beans arrive before you run out.</h3>
-          <p class="step-body">Curated specialty roasts are auto-replenished to your schedule. Restaurant-quality coffee, every morning — with no ordering, no tracking, no running out.</p>
+          <p class="step-body">Curated specialty roasts are auto-replenished to your schedule. Restaurant-quality coffee, every morning - with no ordering, no tracking, no running out.</p>
         </div>
         <div class="hiw-step">
           <span class="step-number">INVOICE</span>
@@ -1405,89 +1425,12 @@
         <div class="hiw-step">
           <span class="step-number">REVENUE</span>
           <h3 class="step-title">Add tap-to-drink. Start generating revenue.</h3>
-          <p class="step-body">Optional. A cashless payment terminal turns every cup into a transaction. Revenue flows directly to you — Ventra takes no cut. At scale, this offsets your full monthly cost.<br><br><a href="/higher-education" style="font-size:13px;font-weight:600;color:var(--graphite);text-decoration:none;">Higher Education? See our campus model →</a></p>
+          <p class="step-body">Optional. A cashless payment terminal turns every cup into a transaction. Revenue flows directly to you - Ventra takes no cut. At scale, this offsets your full monthly cost.<br><br><a href="/higher-education" style="font-size:13px;font-weight:600;color:var(--graphite);text-decoration:none;">Higher Education? See our campus model →</a></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── PRICING ───────────────────────────────────────── -->
-  <section id="pricing">
-    <div class="pricing-inner">
-      <p class="section-label">Investment</p>
-      <h2 class="section-title pricing-title">What does it cost?</h2>
-      <p class="pricing-intro">Every Ventra deployment is built to your space, your volume, and your team. The figures below are indicative ballparks only — your actual investment will depend on the machine that's right for you, your monthly bean volume, and whether you add a tap-to-drink payment option.</p>
-      <div class="pricing-cards">
-        <div class="pricing-card">
-          <p class="pricing-card-tier">Entry</p>
-          <p class="pricing-card-price">From $1,800<span style="font-size:13px;font-weight:400;color:var(--silver);">/mo</span></p>
-          <p class="pricing-card-range">Up to 100 cups/day</p>
-          <p class="pricing-card-desc">Smaller teams, single-floor offices, boutique campuses.</p>
-          <div style="margin-top:auto;padding-top:20px;">
-            <a href="#contact" class="btn btn-light" style="width:100%;text-align:center;display:block;">Enquire Now</a>
-          </div>
-        </div>
-        <div class="pricing-card">
-          <p class="pricing-card-tier">Entry-Mid</p>
-          <p class="pricing-card-price">From $2,200<span style="font-size:13px;font-weight:400;color:var(--silver);">/mo</span></p>
-          <p class="pricing-card-range">Up to 120 cups/day</p>
-          <p class="pricing-card-desc">Mid-size offices, busy reception areas, growing campus populations.</p>
-          <div style="margin-top:auto;padding-top:20px;">
-            <a href="#contact" class="btn btn-light" style="width:100%;text-align:center;display:block;">Enquire Now</a>
-          </div>
-        </div>
-        <div class="pricing-card">
-          <p class="pricing-card-tier">Mid-Premium</p>
-          <p class="pricing-card-price">From $3,000<span style="font-size:13px;font-weight:400;color:var(--silver);">/mo</span></p>
-          <p class="pricing-card-range">Up to 160 cups/day</p>
-          <p class="pricing-card-desc">High-traffic environments, larger campuses, corporate headquarters.</p>
-          <div style="margin-top:auto;padding-top:20px;">
-            <a href="#contact" class="btn btn-light" style="width:100%;text-align:center;display:block;">Enquire Now</a>
-          </div>
-        </div>
-        <div class="pricing-card">
-          <p class="pricing-card-tier">Mid</p>
-          <p class="pricing-card-price">From $3,500<span style="font-size:13px;font-weight:400;color:var(--silver);">/mo</span></p>
-          <p class="pricing-card-range">Up to 200 cups/day</p>
-          <p class="pricing-card-desc">High-volume operations, multi-floor deployments, large campus staff rooms.</p>
-          <div style="margin-top:auto;padding-top:20px;">
-            <a href="#contact" class="btn btn-light" style="width:100%;text-align:center;display:block;">Enquire Now</a>
-          </div>
-        </div>
-      </div>
-      <p class="pricing-note">All prices are AUD per month, ex GST. 36-month managed agreement. Includes machine, specialty beans (to monthly allowance), all maintenance and servicing, and auto-replenishment. Optional: cashless tap-to-drink payment terminal. All prices are ballpark "from" figures — your actual monthly investment will be confirmed in your tailored quote.</p>
-      <div style="background:var(--white);border:1px solid #e0e0dc;padding:32px 36px;margin-bottom:40px;">
-        <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:var(--silver);margin-bottom:10px;">Optional Add-On</p>
-        <h3 style="font-size:18px;font-weight:700;letter-spacing:-0.01em;margin-bottom:10px;">Add tap-to-drink revenue.</h3>
-        <p style="font-size:14px;color:var(--graphite);line-height:1.7;max-width:680px;">Add a contactless cashless payment terminal to any machine. Revenue from every transaction flows directly to you. Ventra takes no cut. For higher education campuses with 300+ enrolled students, the revenue offset can make your student machine effectively cost-neutral. <a href="/higher-education" style="color:var(--black);font-weight:600;text-decoration:none;">See the campus model →</a></p>
-      </div>
-      <div class="pricing-cta">
-        <a href="#contact" class="btn btn-light">Get a Quote</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── ABOUT ─────────────────────────────────────────── -->
-  <section id="about">
-    <div class="about-inner">
-      <div class="about-left">
-        <h2 class="section-title about-title">Built for higher education. By someone who knows it from the inside.</h2>
-        <p class="about-founder">Claudio Da Rocha, Founder — Sydney</p>
-        <p class="about-body">Claudio Da Rocha spent 15 years working across Australian international education — Pathway Colleges, Higher Education and University sectors — before founding Ventra. That experience is not a marketing credential. It means we know your intake calendar, the pressure on your ops team at census date, what CRICOS compliance looks like from the inside, and why student experience matters more now than it did three years ago.<br><br>That background sits alongside 20 years in customer experience (CX), employee experience (EX), product development, and B2B solutions — which shapes how Ventra is structured as a business: transparent, accountable, and built the way buyers actually want to work with suppliers.</p>
-      </div>
-      <div class="about-right">
-        <p class="about-why-title">Why HE providers choose Ventra</p>
-        <ul class="about-why-list">
-          <li>The only managed coffee service with a student FPOS revenue model — your students pay, your institution keeps 100%</li>
-          <li>Sector expertise — we know your calendar, your compliance environment, and your ops team's constraints</li>
-          <li>Specialty beans from restaurant-quality Australian roasters, not commodity bulk product</li>
-          <li>National service coverage with contracted 24–48hr SLAs</li>
-          <li>Single invoice, 36-month partnership terms — one line on your P&amp;L</li>
-          <li>Guide pricing published — understand the cost before you engage</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
   <!-- ─── IN YOUR WORKPLACE ───────────────────────────── -->
   <div class="img-feature">
@@ -1518,10 +1461,8 @@
     <div class="img-feature-content">
       <p class="section-label">Tap-to-Drink</p>
       <h2>Contactless payments.<br>Revenue back to you.</h2>
-      <p>Add a cashless payment terminal and every cup becomes a transaction. Students and visitors tap to pay — Visa, Mastercard, Apple Pay, Google Pay. The revenue flows directly to your institution. Ventra takes no cut.</p>
+      <p>Add a cashless payment terminal and every cup becomes a transaction. Students and visitors tap to pay - Visa, Mastercard, Apple Pay, Google Pay. The revenue flows directly to your institution. Ventra takes no cut.</p>
       <p>At scale, the student machine can offset its own monthly cost entirely.</p>
-      <br>
-      <a href="/higher-education">See the numbers for your campus →</a>
     </div>
   </div>
 
@@ -1539,6 +1480,26 @@
       <a href="#contact" class="btn btn-dark" style="flex-shrink:0;">Start Your 30-Day Trial</a>
     </div>
   </div>
+
+  <!-- ─── ABOUT ─────────────────────────────────────────── -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-left">
+        <h2 class="section-title about-title">Built by someone who has managed operations from the inside.</h2>
+        <p class="about-founder">Claudio Da Rocha, Founder - Sydney</p>
+        <p class="about-body">Claudio Da Rocha spent 15 years working across Australian international education - Pathway Colleges, Higher Education and University sectors - before founding Ventra. That experience is not a marketing credential. It means we know your intake calendar, the pressure on your ops team at census date, what CRICOS compliance looks like from the inside, and why student experience matters more now than it did three years ago.<br><br>That background sits alongside 20 years in customer experience (CX), employee experience (EX), product development, and B2B solutions - which shapes how Ventra is structured as a business: transparent, accountable, and built the way buyers actually want to work with suppliers.</p>
+      </div>
+      <div class="about-right">
+        <p class="about-why-title">Why HE providers choose Ventra</p>
+        <ul class="about-why-list">
+          <li>Sector expertise - we know your calendar, your compliance environment, and your ops team's constraints</li>
+          <li>Specialty beans from restaurant-quality Australian roasters, not commodity bulk product</li>
+          <li>National service coverage with contracted 24–48hr SLAs</li>
+          <li>Single invoice, 36-month partnership terms - one line on your P&amp;L</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <!-- ─── CONTACT ───────────────────────────────────────── -->
   <section id="contact">
@@ -1575,10 +1536,7 @@
         <p>Sydney &nbsp;·&nbsp; Melbourne</p>
       </div>
       <div class="footer-right">
-        <p>The Da Rocha Trust</p>
-        <p>Trustee: Da Rocha Holdings Pty Ltd</p>
-        <p>ABN 68 383 577 439</p>
-        <p>Trading as Ventra</p>
+        <p>Da Rocha Holdings Pty Ltd trading as Ventra Coffee · ABN 68 383 577 439</p>
         <p><a href="mailto:info@ventracoffee.com.au" style="color:var(--silver);text-decoration:none;">info@ventracoffee.com.au</a></p>
         <p>+61 257 007 038</p>
       </div>
