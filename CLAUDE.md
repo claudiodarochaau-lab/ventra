@@ -1,346 +1,101 @@
-# Ventra — Master Business Context
-# ⚠️ This is the single source of truth. Update here first, always.
-# Last updated: April 2026 (v2 — fully populated)
+# CLAUDE.md — Ventra Coffee
 
----
-
-## What We Do
+Last updated: 6 July 2026 (v2 — reconciled against financial model v7.3.1.2)
 
-Before any task, read BRAND.md in the repo root and apply all brand rules without exception.
+## Who I am
 
-Ventra is a B2B managed coffee service built specifically for Australian private higher education providers. We deliver a two-machine solution — a premium staff machine and a student-facing FPOS machine with contactless payments — under a single monthly subscription. Everything is included: commercial-grade machines, specialty beans, maintenance, consumables, and auto-replenishment. Partners never file a maintenance request, never manage a supplier relationship, and never think about coffee. It simply works.
+Claudio, Founder & CEO of Ventra Coffee, trading under Da Rocha Holdings Pty Ltd (ABN 68 383 577 439 — ABN belongs to the trust, not the company). Solo founder; my partner is co-director. ~15 years in Australian international education (Study Group, Navitas, Study Perth, AIH — most recently senior leadership at AIH covering brand/marketing, student experience, employee experience). Based in Sutherland, Sydney. AI is my primary production resource across legal, financial, operational, and marketing workstreams.
 
-**The core value exchange:**
-- Staff get excellent, complimentary coffee — an EX win that signals the organisation cares
-- Students tap-to-pay on a Nayax FPOS terminal — generating revenue that flows directly to the institution, offsetting most or all of the machine cost
-- Leadership gets zero cognitive overhead — one invoice, one partner, 24–48hr service guarantee
-
-**We are not in active build phase. The product is defined. Pricing is confirmed. Outreach can begin.**
-
----
-
-## The Market Context We Operate In
-
-- The onshore agent commission ban took effect 31 March 2026 — providers can no longer pay commissions for onshore student transfers
-- This creates financial pressure and pipeline uncertainty across the private HE sector
-- **The key implication for Ventra:** when enrolments reset and recruitment pipelines thin, student *retention* becomes the primary commercial lever — not acquisition
-- Student experience (SX) is an outsized retention driver in a declining or resetting market
-- Private HE providers are simultaneously cost-constrained and under pressure to demonstrate student value
-- The 485 visa fee doubled to AU$4,600 — adding financial strain to onshore students
-- India remains in the highest visa-risk tier — affecting inbound pipeline composition
+## What Ventra is
 
-**How this connects to Ventra's positioning:**
-The commission ban is useful market context, not the core pitch. The core pitch is: outstanding SX and EX, zero cognitive overhead, and a FPOS revenue offset that makes this a low-cost, high-impact retention tactic — exactly what a spend-constrained campus needs right now.
-
-Do NOT lead with the commission ban in outreach. Lead with student retention and the revenue offset story.
-
----
-
-## Our Ideal Customer Profile (ICP)
-
-**Primary ICP:**
-- Private higher education providers in Australia with CRICOS registration
-- Geography: Sydney and Melbourne primary; national for multi-campus groups
-- Campus size tiers:
-  - **Tier A (Premium):** 150+ staff, 600+ enrolled students/campus — Franke/WMF machines
-  - **Tier B (Mid):** 80–150 staff, 300–600 students — Dr Coffee Bar Plus or Franke A300
-  - **Tier C (Entry):** 30–80 staff, 150–300 students — Dr Coffee Break Plus + Franke A300
-- Decision makers (in priority order):
-  1. Campus GM / Campus Director / CEO — day-to-day operational authority, vendor relationship owner
-  2. COO / Operations Director / GM National Operations — facilities budget, sign-off on 36-month commitments
-  3. Head of Student Experience / Campus Manager / CFO — SX angle for FPOS pitch; financial sign-off for groups
-- Pain points: stretched operational teams, no time for vendor management, pressure to demonstrate student value, cost constraints post-commission disruption
-- Buying trigger: new intake pressure, student retention focus, facilities contract review, operational simplification initiatives
-
-**Secondary ICP (Year 2+):**
-- NSW Health & public sector campuses
-- Commercial property and corporate headquarters
-- Fitness centres and gyms
-
-**Who we are NOT for:**
-- Providers outside Sydney/Melbourne with no multi-campus rationale (Perth/QLD-only = Out of Market until Year 2)
-- Campuses with fewer than 30 staff or 150 students (below viable FPOS revenue threshold)
-- Organisations wanting to own their own equipment or manage their own coffee supply
-
-**Warm network (priority outreach — do these before any cold outbound):**
-
-| Contact | Role | Institution | Relationship |
-|---------|------|-------------|--------------|
-| Alex Chevrolle | CEO, Kaplan Singapore | Kaplan Business School | Close colleague/friend — was Sales Director & MD at Study Group |
-| Morwenna Shahani GAICD | CEO | UTS College | Coffee catch-ups — decision-maker |
-| Gordon Bobin | COO | AIH / Excelsia University College | Co-ELT member at AIH — worked together daily |
-| Jeffrey Gosper | Dean | Apex Australia Higher Education | Worked together at Study Group |
-| Lee Kennedy-Davidson | COO | ECA Higher Education | Worked together at Study Group |
-| Andrew Knight | Campus Director | CSU | Close colleague/friend — was Admissions Director at Study Group |
-| Neil Fitzroy | MD Australasia | Oxford International | EGM at Navitas together — close ally |
-| Leigh Pointon | EGM | Navitas | EGM at Navitas together |
-| Matthew Durie | Sales Director | Kaplan (Murdoch Institute) | Close colleague — ANZ Sales Director at Study Group |
-| Daniella Storm | Director Global Student Recruitment | ILSC | Close colleague — ANZ Sales Director at Study Group |
-| James Flannigan | Director of International | TAFE NSW | Worked together at Study Group |
-| Cratis Hippocrates | Education Consultant | Multiple | Close colleague — BD Director at Study Group |
-| Andrew Dawkins | Education Consultant | Multiple | Close colleague — Director of Colleges at Study Group |
-| Marnie Watson (IEAA-F) | Education Consultant | Multiple | Senior intro opportunity — close colleague of Alex Chevrolle |
-| Peter Jones | Education Consultant | Multiple | Close colleague — Chief of Staff to Alex at Study Group |
-
----
-
-## Products & Services
-
-### The Two-Machine Campus Model (standard deployment)
-
-Every Ventra campus engagement starts with this model: one staff machine, one student FPOS machine. Both are fully managed.
-
----
-
-### Product 1: Staff Machine Bundle
-
-**What it is:** A premium commercial bean-to-cup machine installed in the staff common area, fully managed by Ventra. Complimentary for staff — a tangible EX benefit with no operational overhead.
-
-**What's included:**
-- Commercial-grade machine (see tiers below)
-- Specialty beans from named Australian roasters (Pablo & Rusty's House Espresso as standard; Toby's Estate Single Origin for premium upsell)
-- Minimum order quantity (MOQ) beans included in monthly invoice
-- Full maintenance and servicing
-- Consumables and auto-replenishment
-- 24–48hr service response SLA
-- One line item on monthly invoice
-
-**Machine tiers:**
-
-| Tier | Machine | Rated Capacity | Notes |
-|------|---------|---------------|-------|
-| Entry | Dr Coffee Break Plus | 100 cups/day | Best for 30–80 staff |
-| Entry/Mid | Schaerer Coffee Club | ~100 cups/day | Alternative entry option |
-| Mid | Dr Coffee Bar Plus | 200 cups/day | Best for 80–150 staff |
-| Mid | Schaerer Coffee Skye | ~150 cups/day | Mid-tier Schaerer option |
-| Mid/Premium | Franke A300 | 90 cups/day | High-quality, compact |
-| Mid/Premium | Franke A600 | 160 cups/day | Premium output |
-| Premium | WMF 1300S | High volume | 150+ staff campuses |
-| Premium | WMF 1500S+ | Very high volume | Flagship campuses |
+Fully managed B2B coffee service targeting the Australian higher education sector. Premium, bespoke-per-client model: equipment, beans, service — one partner, no downtime. All financial modelling is modular (FPOS on/off, machine count variable). Target GM: 40–50% on bundle deals. Hard floor: 35% GM.
 
-**Pricing:** ~$2,083/month (Entry — Dr Coffee Break Plus)
-**Status:** Live
+Beachhead strategy leverages my higher-ed network and sector expertise. Public launch moment: AIEC 2026 (27–30 October, Sydney).
 
----
+## Product and model reference (confirmed)
 
-### Product 2: Student FPOS Machine Bundle
+- **Machines:** Franke only, via CWE. A300 for ≤100 cups/day; A600 for >100 cups/day. No staff/student machine split.
+- **Roasting partner:** P&R (Pablo & Rusty's), Porter Street blend at $28/kg, dial-in free. Bean dose: **20g** (confirmed in model v7.3.1.2 — supersedes earlier 23g figure).
+- **Milk:** **180ml/drink incl spillage** (confirmed v7.3.1.2 — supersedes 190ml). Woolies for Business 3L: Sydney $5.45 incl delivery allocation, Melbourne $5.75. 80% milk:black split assumption. Milk alternatives sourcing in progress.
+- **Consumables:** Cups, lids, stirrers via Food Packaging Online (FPO).
+- **Equipment pricing (confirmed, per v7.3.1.2):** Franke A300 MS EC W4 plumbed at $7,725 (25% off RRP $10,300, Jan 2026 list — bundle deal contingent on 3-unit simultaneous PO: 2× CSU + 1 demo; net $515/unit below standing wholesale $8,240). SKU still to be reconfirmed in writing by CWE. Milk fridge $700 (±10%). Delivery: Sydney Metro $600; Melbourne $600 + $95 ex-GST surcharge (confirmed in writing). Commissioning $360/site, installation $480/site. BRITA plumbed filtration kit $400.08/site (head $69.60 + C300 $206.40 + fittings $98.80). Franke telemetry modem $400/unit (capitalised with machine). Software licence $100/unit, 5-year term, amortised $20/unit/year. Total upfront cash per site: Sydney $10,665.08, Melbourne $10,760.08.
 
-**What it is:** A commercial bean-to-cup machine in a high-traffic student area (common room, library entrance, reception) with Nayax contactless payment terminal. Students tap-to-pay. Revenue flows directly to the institution — Ventra takes no cut.
+## CSU pilot (August 2026 target)
 
-**What's included:**
-- Franke A300 (Entry/Mid) or Franke A600/WMF (Premium) machine
-- Nayax FPOS terminal (Visa, Mastercard, Apple Pay, Google Pay)
-- Commercial blend specialty beans (quality mid-tier: Witham's or Seven Miles — TBC supplier confirmation)
-- MOQ beans included
-- Real-time transaction reporting
-- Full maintenance and servicing
-- Consumables and auto-replenishment
-- 24–48hr service response SLA
-- One line item on monthly invoice (separate from staff machine)
+- **Deal structure:** 1-year initial term with mutual intent to negotiate 2-year extension (shorter term reduces CSU internal approval burden — per Andrew Knight). $1,300/month base fee per site + $0.75/cup consumption fee billed to CSU. **Year 1 is CSU-funded free access — all cups billed to CSU, students pay nothing, no payment terminal.** Nayax FPOS **deferred to Year 2** (saves $500 capex + $240/yr platform fee per site vs FPOS model).
+- **Sites:** One Franke A300 per campus — Sydney North + Melbourne CBD. Both plumbed (Sydney plumbed access confirmed by Andrew via WhatsApp, overriding earlier tank-fill site survey).
+- **Volume assumptions (v7.3.1.2):** Sydney 80 cups/day (80% of 100 capacity), Melbourne 40 cups/day. Annual: 15,760 Syd + 8,160 Mel = 23,920 combined (38 teaching weeks + staff consumption in 14 non-teaching weeks: 10 staff × 4 coffees/week per site).
+- **Volume economics — DECIDED 6 July 2026:** Variable cost per cup (~$0.97 Syd) exceeds the $0.75 consumption fee, so margin erodes as volume rises above forecast; the base fee carries the deal. Bounded exposure: worst case roughly −$1,700 to −$2,700/yr combined against $15.3k Y1 net contribution. **Decision: wear it for this deal at the agreed $0.75; restructure pricing for deal #2** (see ICP pricing guardrails). Mitigation: monthly telemetry volume-vs-forecast reporting to Andrew from day one — protects CSU budget surprise risk (Melbourne demand doubling would near-double CSU's consumption bill) and the renewal/case-study value.
+- **Model headline (v7.3.1.2):** Y1 combined GM 46.1% (Syd 39.0%, Mel 55.0% — both pass 35% floor). Y1 net contribution $15,336; Y2+ $19,111. Payback 15.9 months from contract start. 3-year cumulative net contribution $53,557. Milk-mix sensitivity: floor unbreachable by mix variation alone (breakeven milk % >100%).
+- **Academic calendar:** 38 teaching weeks, 14 staff/break weeks per 52-week year. Standalone HTML cost calculator built and calibrated to Andrew's confirmed calendar.
+- **Status:** CEO approval pending internally at CSU (Andrew Knight managing).
 
-**The revenue offset model:**
-- Institution sets the price per cup (typically $2.50–$3.50; model uses $3.00 as midpoint)
-- At 15% daily uptake (conservative), 300 enrolled students, $3.00/cup, 22 operating days:
-  - Monthly student revenue = ~$2,970 flowing to institution
-  - Gross FPOS bundle cost = ~$2,978/month
-  - **Net cost to institution = effectively $0** (at conservative uptake)
-- Higher uptake or larger student populations = net positive revenue to institution
-- Ventra actively supports partners to drive utilisation
+## Workstream status
 
-**FPOS revenue by campus size (illustrative, 15% uptake, $3.00/cup, 22 days):**
+### Legal (MSA)
+- Original MSA built from an outdated Apex Coffee template, then rebuilt twice. Current version: FPOS/Nayax provisions removed where not applicable, 30-day invoice/EFT terms (replacing direct debit), reporting obligations added, narrowed trademark licence, No Franchise sub-clause, Non-Solicitation and Non-Circumvention clause.
+- Solicitor: Harris Jones (replaced Lisa — terminated for unresponsiveness). **Redline due 17 July.**
+- **Franchising Code risk:** open question whether the broader Ventra rollout model triggers the Franchising Code of Conduct. Material business-model issue — must be resolved before AIEC. Franchise specialist lawyer already engaged if triggered.
 
-| Enrolled Students | Monthly Student Revenue | FPOS Bundle Cost | Net Cost |
-|-------------------|------------------------|------------------|----------|
-| 150 | ~$1,485 | ~$2,978 | ~$1,493 |
-| 300 | ~$2,970 | ~$2,978 | ~$8 |
-| 500 | ~$4,950 | ~$2,978 | **–$1,972 (net positive)** |
-| 700+ | ~$6,930 | ~$2,978 | **–$3,952 (net positive)** |
+### Financial model (Ventra_CSU_v7_3_1_2.xlsx — current version)
+- Near-final. Payback 15.9 months. Built/edited with openpyxl. Eight sheets: Assumptions, Sydney P&L, Melbourne P&L, Blended Summary, CSU Billing Schedule, Consolidated P&L, Ordering & MOQ, Mix Sensitivity.
+- Plumbed machine SKU and BRITA plumbed-config pricing now IN the model (previously flagged as pending) — written reconfirmation from CWE still outstanding.
+- **Sole unresolved costing input:** hot chocolate dosage/cost from P&R — $0.02/cup placeholder; follow up Wed 8 July if no response.
+- **Known fixes pending:** (1) stale narrative note in Consolidated P&L depreciation line cites "$8,240 + $700" — calculated value $1,765/yr is correct ($7,725 + $700 fridge + $400 modem ÷ 5), only the note text is wrong; (2) no Volume Sensitivity sheet — mix sensitivity is near-irrelevant, volume is the risk that matters under current pricing (see CSU volume economics above).
 
-**Pricing:** ~$2,978/month (Entry — Franke A300 + Nayax)
-**Status:** Live
+### Insurance
+- Youi: confirmed structurally unable to cover equipment at third-party premises. Dead.
+- EBM and Upcover: live tracks. **Hard decision point 10 July** on escalating to a third broker. Two binary checks: (1) explicit written cover for unattended equipment at third-party premises, (2) credible bind-by-August timeline.
 
----
+### Payments
+- Amex Business application declined (pre-revenue). Recommended card was Amex Business Gold Plus (200k MR bonus, AccessLine, Qantas/Velocity transfer flexibility) via the Trust structure.
+- Bridge: co-director's personal Amex Velocity Platinum for equipment purchases.
+- Pay.com.au tested at 1.98% actual fee (1.8% + GST). **Open:** GST treatment (input tax credit vs. deductible) — confirm with Yvette.
 
-### Combined Campus Bundle
+### Tax / FY27 strategy
+- Instant Asset Write-off applicable pending Yvette's confirmation of threshold eligibility.
+- Equipment purchases deliberately delayed to post-1 July 2026 to align deductions with first revenue year.
 
-**Total monthly investment:** ~$5,061/month (Entry tier — both machines)
-**Institution net cost after FPOS revenue offset (300 students, 15% uptake):** ~$2,091/month
-**Institution net cost at 500+ students:** Potentially $0 or net positive
+### AIEC 2026 (27–30 Oct, Sydney)
+- 3×2m corner shell-scheme booth confirmed. **Open:** exhibition stand and furniture order.
+- Stand design iterated in Canva. Locked copy — back wall: "Coffee, fully managed." Side panel: "Equipment. Beans. Service. One partner, no downtime."
+- Franke and P&R logos confirmed for stand, pending P&R clause 4.6 written brand-use approval. CSU/Navitas logos deferred pending written sign-off.
+- Full B2B launch campaign playbook: four phases (Ignite, Build, Converge, Harvest), July–mid-November 2026. Targets: 9–15 pre-booked AIEC meetings, 5 SQL follow-up meetings, 3 signed clients by 31 December 2026.
 
-**Invoicing model:**
-- One invoice per campus, one line item per machine bundle
-- Multi-campus partners: agree upfront whether one invoice per group or per location
-- Only variable line item: additional beans ordered above MOQ in prior month
-- 36-month contracted term
-- 30-day trial available for hesitant prospects (Dr Coffee Break Plus — 70% conversion target)
+## Supplier and stakeholder map
 
----
+| Contact | Org | Role / notes |
+|---|---|---|
+| Michele | CWE | Equipment. 25% discount on 3-unit PO confirmed; modem/software pricing and applicable discounts still to be confirmed in writing. |
+| Richard | P&R | Consumables/beans. Clause 4.1 is an active pricing-adjustment mechanism tied to 20kg/week MOQ (not merely a termination reference, contra Richard's characterisation). Negotiating position: 40kg/month rolling 3-month average. Clause 4.6 requires prior written approval for brand use. |
+| Andrew Knight | CSU | Client contact; managing internal CEO approval. |
+| Yvette | — | Accountant/bookkeeper. Open items: pay.com.au GST treatment, IAWO threshold eligibility. |
+| Lily | Franke Oceania | Marketing; AIEC co-branding discussions. |
+| Harris Jones | — | Solicitor. MSA redline due 17 July. |
 
-## Pricing
+Supplier decisions already made: Danes assessed and rejected (fails 35% GM floor at Sydney site level). Milk keg alternatives explored (The Udder Way, Food and Dairy Co) after early distributor issues — Woolies for Business is current supply.
 
-| Product | Monthly Price | Model | Status |
-|---------|--------------|-------|--------|
-| Staff Machine Bundle (Entry) | ~$2,083 | Monthly subscription | Confirmed |
-| Staff Machine Bundle (Mid) | ~$2,500–3,500 | Monthly subscription | Confirmed |
-| Staff Machine Bundle (Premium) | ~$4,500–5,500 | Monthly subscription | Confirmed |
-| Student FPOS Bundle (Entry) | ~$2,978 | Monthly subscription | Confirmed |
-| Student FPOS Bundle (Mid/Premium) | ~$1,500–2,000 add-on | Monthly subscription | Confirmed |
-| Combined Campus (Entry) | ~$5,061 | Monthly subscription | Confirmed |
+## Tech infrastructure
 
-**Pricing principles:**
-- Value-based, not cost-plus — anchored against the cost of a full-time operations hire that never has to think about coffee
-- The FPOS bundle should always be presented net of revenue offset — the net cost framing, not the gross
-- 36-month terms enable the full-service model — this is a partnership, not a hire arrangement
-- Entry tier is accessible for smaller private HE campuses; premium tier for flagship/high-traffic sites
+- **Ventra CRM:** standalone Express + Vite React project, SQLite (better-sqlite3). Data hierarchy: Groups → Organisations → Sites. Six pipeline stages. Built via a seven-prompt build sequence.
+- **AI chatbot:** Cloudflare Worker deployed as Pages Function, integrated with Anthropic API and HubSpot CRM.
+- **Marketing site:** ventracoffee.com.au on Cloudflare Pages, GitHub source repo. Staging: ventra-staging.netlify.app watching the staging branch.
+- **Marketing system:** seven-agent Claude Code marketing setup (early build).
 
----
+## Open items (priority order)
 
-## Our Differentiation / Why Ventra
+1. Insurance shootout decision — **10 July** (EBM vs Upcover vs escalate to third broker; two binary checks: written cover for unattended equipment at third-party premises + credible bind-by-August timeline).
+2. MSA redline from Harris Jones — **17 July**.
+3. Hot chocolate dosage/cost from P&R — **chase Wed 8 July** — last costing input for v7.3.1.2.
+4. Franchising Code risk clarification with Harris Jones — before AIEC.
+5. Pay.com.au fee GST treatment — Yvette.
+6. CWE written confirmation: plumbed A300 MS EC W4 SKU, BRITA plumbed pricing, modem/software discount applicability.
+7. Model housekeeping: fix stale depreciation note; add Volume Sensitivity sheet.
+8. Set up monthly telemetry volume-vs-forecast report to Andrew (contract mitigation — do before launch).
+9. AIEC stand and furniture order.
+10. P&R clause 4.6 written brand-use approval (stand logos).
+11. CSU CEO approval — monitor via Andrew Knight.
 
-1. **Sector expertise no generic coffee company can match.** Claudio has 15 years in Australian international education — at Study Group, Navitas, AIH. He knows CRICOS, National Code, semester cycles, the student demographic mix, and the pressure private HE ops teams are under. A generic coffee company doesn't know what NOSC allocations are. We do.
+## Sector context
 
-2. **The FPOS revenue offset — unique in the market.** No competitor offers a student-facing FPOS model where revenue flows directly to the institution. At scale, the student machine pays for itself and generates surplus revenue. This reframes the entire conversation from "cost" to "investment with measurable return."
-
-3. **Zero cognitive overhead — genuinely, not as a marketing phrase.** One invoice, one partner, 24–48hr SLA, auto-replenishment, no maintenance requests, no bean ordering. For an ops team already managing compliance, enrolments, and facilities, this is a real operational relief.
-
-4. **A 36-month partnership, not a vending contract.** Competitors sell machine hire. Ventra sells a managed outcome. The commitment reflects the depth of service — and the depth of service is why the model works.
-
-5. **Premium without pretension.** Named Australian roasters (Pablo & Rusty's, Toby's Estate), commercial-grade machines (Franke, WMF, Schaerer), contactless payments. Not pod machines. Not a vending company pretending to be a coffee business.
-
----
-
-## Brand Voice & Positioning
-
-**Positioning statement:** "For organisations that value their people, Ventra is the coffee partner that simply works."
-
-**Tone:** Direct, Assured, Human, Minimal.
-
-**We sound like:** A trusted senior business partner who has been in this sector for years — someone who knows your campus, your intake calendar, your ops team's pressure points. We say what we mean and we don't waste your time.
-
-**We don't sound like:** A startup pitching disruption. A vending company upselling beans. A generic B2B SaaS vendor with an enthusiasm problem.
-
-**The four voice principles (from brand guidelines):**
-1. **Direct** — Fewer words. No preamble, no unnecessary qualifiers. Every word earns its place.
-2. **Assured** — We don't need to convince you we're good. Our record does. Confidence is the posture, not competence-signalling.
-3. **Human** — We know your campus, your intake dates, what we discussed last time. Partnership is how we operate, not a CRM field.
-4. **Minimal** — One email when one email is needed. We don't send newsletters. We don't pad. Your time is not ours to spend.
-
-**Say this / Not this examples:**
-- Proposal intro: "We've put together a proposal tailored to your campus size and student numbers. Everything you need is here — no surprises, no hidden costs." NOT "We're SO excited to share this amazing proposal!"
-- Email subject line: "Ventra — Proposal for [Institution Name]" NOT "Your EXCLUSIVE Coffee Partnership Opportunity Awaits"
-- Website hero: "Specialty coffee. Fully managed. One monthly fee. Your team drinks well. You don't think about it." NOT "We're passionate about bringing the coffee shop experience to your workplace!"
-
-**Key messages:**
-1. Outstanding student and staff experience — with zero cognitive overhead
-2. The FPOS machine generates revenue for your institution. At scale, it covers its own cost.
-3. One invoice. One partner. It simply works.
-
----
-
-## Competitors & Positioning
-
-| Competitor | What They Do | Their Hook | Our Position Against Them |
-|-----------|-------------|-----------|--------------------------|
-| **Procaffé** | Generic workplace coffee, Melbourne-focused, Franke partner, 20+ years, offices/healthcare/education | "No lock-in contracts" — positioned as safe/flexible | They're a coffee company that happens to serve education. We're a sector partner that understands your campus. No FPOS revenue model, no dual staff/student design, no HE expertise. |
-| **My Office Coffee** | Sydney-focused, specialty beans, automatic machines, no lock-in | "No lock-in, specialty grade" | Generic workplace positioning. No FPOS. No HE sector knowledge. No managed outcome — they supply, you manage. |
-| **Barista Buddy** | Pay-per-cup, "FREE" machines, no contracts, cancel anytime, 500+ businesses | "Zero commitment, free machine" | Transactional commodity model. The race to the bottom on price. Ventra is a premium managed partnership — we're not competing on this axis. |
-| **7 Grams Coffee** | Flexible rental/leasing, no lock-in, no setup fees, nationwide | "Flexibility and freshness" | Generic. No FPOS, no sector expertise, no dual-machine campus model. |
-
-**Universal competitor weakness:** Every competitor leads with "no lock-in contracts." Ventra's 36-month commitment is the trade-off for a genuinely managed service with SLAs, FPOS integration, and a revenue model that works. The counter: _"A no-commitment arrangement means no accountability. Our 36-month partnership is why we can guarantee the service level and stand behind the revenue offset model."_
-
----
-
-## Sales & Go-to-Market Motion
-
-**Primary channel (Phase 1):** Warm outreach to existing network — 15 named contacts at priority institutions before any cold outbound
-**Primary channel (Phase 2):** Targeted outbound to Tier A and Tier B accounts in Sydney and Melbourne (BD Hitlist in Volume Calculator spreadsheet)
-**Sales cycle length:** 8–10 weeks (private HE sector, austerity conditions, April 2026)
-**Target start date:** May 2026 outreach → July 2026 first installations
-
-**Decision maker priority:**
-1. Campus GM / CEO / Campus Director (operational authority, first conversation)
-2. COO / Operations Director (contract sign-off)
-3. Head of Student Experience / CFO (FPOS financials)
-
-**Lead message:** Always lead with the student FPOS revenue offset story — not the coffee pitch. "The student machine generates revenue that offsets the cost. At 300 students, it's effectively self-funding." Open with commercial logic, let the product quality close.
-
-**Multi-campus close:** After first campus conversation, immediately propose a group agreement across all campuses. One contract, one invoice — this is Ventra's biggest commercial lever.
-
-**Trial offer (for hesitant prospects):** 30-day proof-of-concept trial with Dr Coffee Break Plus Entry machine. Target 70% conversion to full 36-month agreement.
-
-**Outreach sequencing:**
-1. Warm network first (immediate)
-2. Sydney Tier A accounts (first cold wave)
-3. Melbourne Tier A accounts
-4. Tier B across both cities
-
-**Key objections and responses:**
-
-| Objection | Response |
-|-----------|----------|
-| "The bundle cost is too high" | "At 300 students, the FPOS machine is self-funding. Net cost is ~$2,091/month — for fully managed, premium coffee for your entire staff. That's less than a part-time admin hire." |
-| "36 months is too long a commitment" | "The 36-month term is what enables the full managed service — guaranteed SLAs, proactive replenishment, FPOS integration. A no-commitment arrangement means no accountability on either side. We stand behind our service because we're committed to your campus." |
-| "What if students don't use it? (under-utilisation)" | "Our conservative model is built on 15% daily uptake — we work with you to drive utilisation through placement, signage, and pricing guidance. Most campuses exceed 15% within 60 days." |
-| "Will this really impact retention?" | "Coffee is a daily, visible signal that you care about your students' experience. It's not a silver bullet — but in a market where students are choosing between providers, the quality of campus life matters. It's also measurable: we can track FPOS transaction volume and show utilisation data." |
-| "We've already got a pod machine, that's fine for now" | "We hear this a lot. A pod machine says 'we have coffee.' A Franke or WMF with specialty beans says 'we invest in your experience.' The difference is visible to students every day. And your staff deserve better than pods." |
-| "Not the right time — too many changes happening" | "Exactly why we designed the model the way we did. One invoice, zero management overhead — this is the one thing that won't add to your plate. We handle everything." |
-
----
-
-## Tech Stack
-
-- CRM: HubSpot
-- Volume Calculator & BD Hitlist: Ventra_Volume_Calculator.xlsx (source of truth for account tiers, contacts, FPOS revenue modelling)
-
----
-
-## Supplier & Brand Naming Policy
-
-The following names are confirmed internally and may be used in internal documents, briefs, and sales conversations — but should **not** appear in public-facing website copy or published content until cleared:
-
-- **Bean suppliers:** Pablo & Rusty's (staff machines), Toby's Estate (premium upsell), Witham's or Seven Miles (student FPOS — TBC)
-- **Payment terminal:** Nayax (FPOS terminal brand)
-
-**Why:** Bean supplier for the student FPOS machine is not yet finalised. Naming specific suppliers publicly before confirming relationships creates risk. Public copy should use "named Australian roasters" and "contactless payment terminal" until sign-off is given.
-
-**In sales conversations:** Machine brands (Franke, WMF, Schaerer, Dr Coffee) and the Nayax terminal can and should be named — they are part of the credibility story. This policy applies to published website and content only.
-
----
-
-## Legal & Contact
-
-- **Legal entity:** Da Rocha Holdings Pty Ltd
-- **Trading as:** Ventra
-- **ABN:** 68 383 577 439
-- **Phone:** +61 257 007 038
-- **General:** info@ventracoffee.com.au
-- **Sales:** sales@ventracoffee.com.au
-
----
-
-## Key People
-
-- Claudio Da Rocha: Founder — primary strategic decision maker. 15+ years in Australian international education (Study Group, Navitas, AIH). Primary relationship holder for warm outreach network.
-
----
-
-## Current Priorities (April 2026)
-
-1. Update website copy and positioning for private HE sector (before warm outreach begins)
-2. Execute warm network outreach — personalised messages to 15 named contacts
-3. Finalise bean supplier for student FPOS machine (commercial blend — Witham's or Seven Miles TBC)
-4. Build HubSpot pipeline with BD Hitlist accounts and tier logic
-5. Develop sector-specific SEO/AEO content strategy for organic presence
-
----
-
-## Reference: Ventra Claude Project
-Full project history, artifacts, and research: https://claude.ai/project/019cc676-f827-7020-8235-44162a71d1d0
-
----
-
-## Update Log
-| Date | What Changed | Updated By |
-|------|-------------|------------|
-| April 2026 | Initial file created | Claudio |
-| April 2026 | Full population — product, pricing, ICP, brand voice, competitors, objections, GTM | Claudio + Claude (Head of Marketing) |
+Market intelligence scan completed on Australian private higher education and the onshore agent commission ban (effective March 2026) — structurally relevant to client-base economics and sales narrative.

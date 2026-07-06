@@ -337,20 +337,7 @@ p { max-width: var(--measure); }
   }
 }
 .telemetry__key { color: var(--stone); font-size: var(--fs-label); }
-.telemetry__val {
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  gap: var(--sp-2);
-}
-.telemetry__val::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--silver);
-  flex-shrink: 0;
-}
+.telemetry__val { color: var(--white); }
 
 /* Orchestrated hero sequence — runs once, ~1.2s total */
 @media (prefers-reduced-motion: no-preference) {
@@ -369,14 +356,9 @@ p { max-width: var(--measure); }
   .telemetry__item:nth-child(2) { animation-delay: 0.75s; }
   .telemetry__item:nth-child(3) { animation-delay: 0.95s; }
   .telemetry__item:nth-child(4) { animation-delay: 1.15s; }
-  .telemetry__val::before { animation: pulse 3s ease-in-out 1.6s infinite; }
 }
 @keyframes hero-in {
   to { opacity: 1; transform: translateY(0); }
-}
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.35; }
 }
 
 /* ── Cards ── */
@@ -502,6 +484,8 @@ p { max-width: var(--measure); }
   border-radius: var(--radius);
   overflow: hidden;
 }
+/* Photo slots lose the placeholder border; only labelled empty slots keep it */
+.img-slot:has(img) { border: none; background: none; }
 .img-slot--16x9 { aspect-ratio: 16 / 9; }
 .img-slot--4x3  { aspect-ratio: 4 / 3; }
 .img-slot--3x4  { aspect-ratio: 3 / 4; }
@@ -688,6 +672,45 @@ p { max-width: var(--measure); }
 @media (max-width: 800px) {
   .site-footer__grid { grid-template-columns: 1fr; gap: var(--sp-8); }
 }
+
+/* ── Back to top — injected by site.js ── */
+.back-to-top {
+  position: fixed;
+  bottom: var(--sp-8);
+  right: var(--sp-8);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border: 1px solid var(--mist);
+  border-radius: var(--radius);
+  cursor: pointer;
+  z-index: 250;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.15s ease;
+}
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.back-to-top:hover { background: var(--mist); }
+.back-to-top::before {
+  content: '';
+  width: 15px;
+  height: 11px;
+  background: var(--ventra-black);
+  /* the V chevron, inverted: pointing up */
+  clip-path: polygon(42% 0, 58% 0, 100% 100%, 82% 100%, 50% 22%, 18% 100%, 0 100%);
+}
+@media (max-width: 640px) {
+  .back-to-top { bottom: var(--sp-4); right: var(--sp-4); }
+}
+@media print { .back-to-top { display: none !important; } }
 
 /* ── Print — the how-it-works page is forwarded internally ── */
 @media print {
