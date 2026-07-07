@@ -10,6 +10,10 @@
   <meta property="og:title" content="Coffee, fully managed. | Ventra">
   <meta property="og:description" content="Equipment. Beans. Service. One partner, no downtime. Australia's managed coffee partner for higher education.">
   <meta property="og:url" content="https://ventracoffee.com.au/">
+  <meta property="og:image" content="https://ventracoffee.com.au/assets/og/home.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="preload" href="/assets/fonts/poppins-latin-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -162,21 +166,41 @@
         <h2 id="included-h" class="measure">Everything between the bean and the cup.</h2>
         <div class="card-grid" style="margin-top: var(--sp-12);">
           <div class="card">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="5" y="3" width="14" height="8"/>
+              <path d="M12 11 V14"/>
+              <path d="M15 6 H17"/>
+              <path d="M9 16 L9.6 20 H14.4 L15 16"/>
+            </svg>
             <span class="mono-tag">Equipment</span>
             <h3>Swiss-engineered machines</h3>
             <p>Commercial superautomatic equipment sized to your daily volume, with filtration, installation and commissioning included.</p>
           </div>
           <div class="card">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 4 C7.5 7.5 7.5 16.5 12 20 C16.5 16.5 16.5 7.5 12 4 Z"/>
+              <path d="M12 6.5 C10.3 9.5 10.3 14.5 12 17.5"/>
+            </svg>
             <span class="mono-tag">Beans</span>
             <h3>Specialty coffee, dialled in</h3>
             <p>Beans from an award-winning Australian specialty roaster and certified B Corp: responsibly sourced, roasted locally, and dialled in on your machine.</p>
           </div>
           <div class="card">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="4" y="5" width="16" height="15"/>
+              <path d="M8 3 V7"/>
+              <path d="M16 3 V7"/>
+              <path d="M4 9.5 H20"/>
+              <path d="M9 14.5 L11.3 16.8 L15.5 12.5"/>
+            </svg>
             <span class="mono-tag">Service</span>
             <h3>Maintenance on our initiative</h3>
             <p>Preventative maintenance, cleaning cycles and consumables are scheduled and delivered by Ventra. Faults are ours to fix, not yours to chase.</p>
           </div>
           <div class="card">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M3 12 H8.5 L11 7.5 L13.5 16.5 L16 12 H21"/>
+            </svg>
             <span class="mono-tag">Telemetry</span>
             <h3>Machines that report in</h3>
             <p>Every machine carries telemetry. We see volumes and faults remotely, act before they become downtime, and you receive the reporting monthly.</p>
@@ -202,7 +226,7 @@
                (machine in campus corridor, monochrome treatment). The asset
                below is temporary AI-generated placeholder art, greyscaled
                by the .img-slot CSS until commissioned photography lands. -->
-          <div class="img-slot img-slot--4x3">
+          <div class="img-slot img-slot--4x3" style="background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAGKADAAQAAAABAAAACwAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8AAEQgACwAYAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMAAgICAgICAwICAwUDAwMFBgUFBQUGCAYGBgYGCAoICAgICAgKCgoKCgoKCgwMDAwMDA4ODg4ODw8PDw8PDw8PD//bAEMBAgICBAQEBwQEBxALCQsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEP/dAAQAAv/aAAwDAQACEQMRAD8A+stKml0/xHrvgi4t4bHSrOzguYLtQRJI9wSzxlvujb+favnLxhp3hGHXbvS7fwuz289vMV1ISbkjuRgL8p7EknPYitTwz4l13U9Vne/vHnN7EFm3Yw67ehGK+ffiI76de6pDYu0CQytsCErjk+lAH014pv8AT/C3g+/1Pwwsd5e2umQyppzMzxSTiM784OULMASfevkL/hoT4t/9E8sf+/kn+Ne+/Ei8ufC+g2uj6A/2KzuNP0x5I0AIdpbUs5YnJJZuTzXzt/bOpf8APb/x1f8ACgD/2Q==);background-size:cover;background-position:center;">
             <picture>
               <source srcset="/assets/images/machine-campus-corridor.webp" type="image/webp">
               <img src="/assets/images/machine-campus-corridor.webp" alt="Coffee machine in a quiet campus corridor" width="1400" height="1050" loading="lazy">

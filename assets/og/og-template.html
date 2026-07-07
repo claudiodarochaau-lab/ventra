@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Source template for OG images (1200x630). Regenerate:
+     see assets/og/generate.sh -->
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @font-face { font-family: 'Poppins'; font-weight: 700; src: url('../fonts/poppins-latin-700.woff2') format('woff2'); }
+  @font-face { font-family: 'Poppins'; font-weight: 400; src: url('../fonts/poppins-latin-400.woff2') format('woff2'); }
+  @font-face { font-family: 'Plex Mono'; font-weight: 400; src: url('../fonts/plex-mono-latin-400.woff2') format('woff2'); }
+  body {
+    width: 1200px; height: 630px; overflow: hidden; position: relative;
+    background: #0D0D0D; color: #FFFFFF;
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 64px 72px;
+  }
+  .mark { position: absolute; top: -60px; right: -40px; width: 560px; opacity: 0.05; }
+  .logo { height: 72px; width: auto; }
+  .tag { font-family: 'Plex Mono', monospace; font-size: 22px; letter-spacing: 0.18em; color: #ABABAB; margin-bottom: 20px; }
+  h1 { font-size: 84px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; max-width: 950px; }
+  .foot { font-family: 'Plex Mono', monospace; font-size: 20px; letter-spacing: 0.14em; color: #6B6B6B; }
+</style>
+</head>
+<body>
+  <svg class="mark" viewBox="0 0 100 78"><polygon points="0,0 17,0 50,62 83,0 100,0 59,78 41,78" fill="#FFFFFF"/></svg>
+  <img class="logo" src="../../logo-dark.svg" alt="">
+  <div>
+    <div class="tag">{{TAG}}</div>
+    <h1>{{TITLE}}</h1>
+  </div>
+  <div class="foot">VENTRACOFFEE.COM.AU</div>
+</body>
+</html>

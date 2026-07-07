@@ -673,6 +673,78 @@ p { max-width: var(--measure); }
   .site-footer__grid { grid-template-columns: 1fr; gap: var(--sp-8); }
 }
 
+/* ── Service-loop diagram — 32° corner language, drawn on scroll ── */
+.service-loop { width: 100%; height: auto; }
+.service-loop .loop-line {
+  fill: none;
+  stroke: var(--stone);
+  stroke-width: 1.5;
+  stroke-linecap: butt;
+}
+.service-loop .loop-stub {
+  fill: none;
+  stroke: var(--silver);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 5;
+}
+.service-loop .loop-node { fill: var(--ventra-black); }
+.service-loop .loop-arrow { fill: var(--stone); }
+.service-loop .loop-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  fill: var(--stone);
+}
+.service-loop .loop-title {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  fill: var(--ventra-black);
+}
+.service-loop .loop-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  fill: var(--silver);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-draw] .loop-line {
+    stroke-dasharray: 2200;
+    stroke-dashoffset: 2200;
+  }
+  .js [data-draw].in-view .loop-line {
+    animation: loop-draw 1.8s ease forwards;
+  }
+  .js [data-draw] .loop-node,
+  .js [data-draw] .loop-arrow,
+  .js [data-draw] .loop-label,
+  .js [data-draw] .loop-title,
+  .js [data-draw] .loop-sub,
+  .js [data-draw] .loop-stub { opacity: 0; }
+  .js [data-draw].in-view .loop-node,
+  .js [data-draw].in-view .loop-arrow,
+  .js [data-draw].in-view .loop-label,
+  .js [data-draw].in-view .loop-title,
+  .js [data-draw].in-view .loop-sub,
+  .js [data-draw].in-view .loop-stub {
+    animation: hero-in 0.6s ease 1.1s forwards;
+  }
+}
+@keyframes loop-draw { to { stroke-dashoffset: 0; } }
+
+/* ── Card icons — consistent 1.5 stroke, butt caps ── */
+.card-icon {
+  width: 26px;
+  height: 26px;
+  stroke: var(--silver);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  margin-bottom: var(--sp-4);
+}
+.surface-light .card-icon, .surface-white .card-icon { stroke: var(--stone); }
+
 /* ── Back to top — injected by site.js ── */
 .back-to-top {
   position: fixed;

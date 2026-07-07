@@ -10,6 +10,10 @@
   <meta property="og:title" content="How the managed model works | Ventra">
   <meta property="og:description" content="Scoping, installation, beans, maintenance, telemetry and reporting. One agreement, one invoice.">
   <meta property="og:url" content="https://ventracoffee.com.au/how-it-works">
+  <meta property="og:image" content="https://ventracoffee.com.au/assets/og/how-it-works.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="preload" href="/assets/fonts/poppins-latin-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -176,12 +180,28 @@
           <p style="margin-top: var(--sp-6); color: var(--stone);">In an unmanaged setup, every step of the loop (noticing, reporting, ordering, chasing) runs through your staff. Under Ventra, the loop runs through telemetry and scheduled service. What stays on campus is deliberately light: a one-button daily clean and occasional top-ups by your coffee champion, keeping quality at its best between our visits.</p>
         </div>
         <div>
-          <!-- TODO [ILLUSTRATION - Phase 3]: service-loop SVG diagram
-               (install → monitor → replenish → service → repeat) in the
-               32° corner language. Placeholder slot until then. -->
-          <div class="img-slot img-slot--4x3">
-            <span class="img-slot__label">Service-loop diagram - Phase 3</span>
-          </div>
+          <!-- Service-loop diagram. Corners are cut at the V mark's 32°
+               construction angle; draws itself on scroll (site.js [data-draw]). -->
+          <svg class="service-loop" data-draw viewBox="0 0 640 460" role="img"
+               aria-label="The Ventra service loop: install, monitor, replenish, service, repeating continuously. Closed by Ventra; your team's part is a one-button daily clean.">
+            <path class="loop-line" d="M140 60 H500 L550 91 V329 L500 360 H140 L90 329 V91 Z"/>
+            <path class="loop-stub" d="M320 366 V400"/>
+            <rect class="loop-node" x="316" y="56" width="8" height="8"/>
+            <rect class="loop-node" x="546" y="206" width="8" height="8"/>
+            <rect class="loop-node" x="316" y="356" width="8" height="8"/>
+            <rect class="loop-node" x="86" y="206" width="8" height="8"/>
+            <path class="loop-arrow" d="M-5 -4 L3 0 L-5 4 Z" transform="translate(525 75.5) rotate(31.8)"/>
+            <path class="loop-arrow" d="M-5 -4 L3 0 L-5 4 Z" transform="translate(525 344.5) rotate(148.2)"/>
+            <path class="loop-arrow" d="M-5 -4 L3 0 L-5 4 Z" transform="translate(115 344.5) rotate(211.8)"/>
+            <path class="loop-arrow" d="M-5 -4 L3 0 L-5 4 Z" transform="translate(115 75.5) rotate(-31.8)"/>
+            <text class="loop-label" x="320" y="94" text-anchor="middle">INSTALL</text>
+            <text class="loop-label" x="526" y="215" text-anchor="end">MONITOR</text>
+            <text class="loop-label" x="320" y="338" text-anchor="middle">REPLENISH</text>
+            <text class="loop-label" x="114" y="215" text-anchor="start">SERVICE</text>
+            <text class="loop-title" x="320" y="202" text-anchor="middle">THE SERVICE LOOP</text>
+            <text class="loop-sub" x="320" y="226" text-anchor="middle">CLOSED BY VENTRA</text>
+            <text class="loop-sub" x="320" y="424" text-anchor="middle">YOUR TEAM · ONE-BUTTON DAILY CLEAN</text>
+          </svg>
         </div>
       </div>
     </section>
