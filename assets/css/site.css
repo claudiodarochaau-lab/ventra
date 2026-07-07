@@ -283,6 +283,26 @@ p { max-width: var(--measure); }
   overflow: hidden;
   padding-block: var(--sp-32) var(--sp-24);
 }
+/* Optional photographic background - dark gradient keeps the brand's
+   black-dominant hero rule; text side (left) stays near-opaque black. */
+.hero__photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero__photo picture, .hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  filter: grayscale(1);
+}
+.hero__photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(13,13,13,0.95) 0%, rgba(13,13,13,0.88) 42%, rgba(13,13,13,0.62) 100%);
+}
 /* Brand signage device: V mark watermark at 5% opacity */
 .hero__mark {
   position: absolute;
@@ -292,6 +312,7 @@ p { max-width: var(--measure); }
   height: auto;
   opacity: 0.05;
   pointer-events: none;
+  z-index: 0;
 }
 .hero__inner { position: relative; z-index: 1; }
 .hero h1 {
