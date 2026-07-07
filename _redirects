@@ -1,0 +1,19 @@
+# Block non-site repo files from being served (Netlify).
+# Cloudflare Pages equivalent lives in functions/_middleware.js.
+/CLAUDE.md            /404.html  404
+/BRAND.md             /404.html  404
+/README.md            /404.html  404
+/SHOTLIST.md          /404.html  404
+/ICP.md               /404.html  404
+/WEBSITE_UPDATE.md    /404.html  404
+/linkedin-company-page-content.md  /404.html  404
+/push-website-copy.sh /404.html  404
+/test-chat.html       /404.html  404
+/website-copy/*       /404.html  404
+/weekly-briefs/*      /404.html  404
+/skills/*             /404.html  404
+/Products/*           /404.html  404
+/Brand/*              /404.html  404
+/assets/og/og-template.html   /404.html  404
+/assets/og/generate.sh        /404.html  404
+/assets/downloads/one-pager.html  /404.html  404
