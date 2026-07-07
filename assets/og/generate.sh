@@ -16,3 +16,4 @@ gen higher-education "FOR HIGHER EDUCATION"               "Coffee that understan
 gen about            "ABOUT VENTRA"                       "Built from inside the sector."
 gen faq              "FAQ"                                "Direct answers."
 gen contact          "CONTACT"                            "Book a discovery meeting."
+gen pricing          "PRICING"                            "How pricing works."
