@@ -208,7 +208,7 @@ p { max-width: var(--measure); }
   gap: var(--sp-8);
 }
 .site-header__logo { flex-shrink: 0; display: flex; align-items: center; }
-.site-header__logo img { height: 44px; width: auto; }
+.site-header__logo img { height: 56px; width: auto; }
 
 .site-nav { display: flex; align-items: center; gap: var(--sp-8); }
 .site-nav__links {
