@@ -106,7 +106,9 @@ p { max-width: var(--measure); }
   color: var(--stone);
   margin-bottom: var(--sp-6);
 }
-.surface-dark .section-label { color: var(--silver); }
+.surface-dark .section-label,
+.hero .section-label,
+.cta-band .section-label { color: var(--silver); }
 .section-label::before {
   content: '';
   width: 13px;
