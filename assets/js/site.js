@@ -3,6 +3,32 @@
 (function () {
   document.documentElement.classList.add('js');
 
+  // Analytics (GA4 + HubSpot) - loaded on first interaction so third-party
+  // scripts never block first paint. thank-you.html keeps them inline
+  // because it's the conversion beacon page.
+  var analyticsLoaded = false;
+  function loadAnalytics() {
+    if (analyticsLoaded) return;
+    analyticsLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-GQNVWTN50D');
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-GQNVWTN50D';
+    document.head.appendChild(ga);
+    var hs = document.createElement('script');
+    hs.id = 'hs-script-loader';
+    hs.async = true;
+    hs.defer = true;
+    hs.src = 'https://js-ap1.hs-scripts.com/442945735.js';
+    document.head.appendChild(hs);
+  }
+  ['pointerdown', 'keydown', 'scroll', 'mousemove', 'touchstart'].forEach(function (ev) {
+    window.addEventListener(ev, loadAnalytics, { once: true, passive: true });
+  });
+
   // Draw-on-scroll for [data-draw] SVGs (service-loop diagram).
   var drawables = document.querySelectorAll('[data-draw]');
   if (drawables.length) {

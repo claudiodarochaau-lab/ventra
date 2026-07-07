@@ -82,7 +82,7 @@ p { max-width: var(--measure); }
   line-height: 1.55;
   color: var(--text-muted-light);
 }
-.surface-dark .lede { color: var(--text-muted-dark); }
+.surface-dark .lede, .cta-band .lede { color: var(--text-muted-dark); }
 
 .pull-quote {
   font-family: var(--font-quote);
@@ -336,12 +336,16 @@ p { max-width: var(--measure); }
     row-gap: var(--sp-6);
   }
 }
-.telemetry__key { color: var(--stone); font-size: var(--fs-label); }
+.telemetry__key { color: var(--silver); font-size: var(--fs-label); }
 .telemetry__val { color: var(--white); }
 
 /* Orchestrated hero sequence — runs once, ~1.2s total */
 @media (prefers-reduced-motion: no-preference) {
-  .hero h1, .hero__support, .hero__ctas {
+  .hero h1 {
+    transform: translateY(10px);
+    animation: hero-in-solid 0.5s ease forwards;
+  }
+  .hero__support, .hero__ctas {
     opacity: 0;
     transform: translateY(10px);
     animation: hero-in 0.5s ease forwards;
@@ -359,6 +363,9 @@ p { max-width: var(--measure); }
 }
 @keyframes hero-in {
   to { opacity: 1; transform: translateY(0); }
+}
+@keyframes hero-in-solid {
+  to { transform: translateY(0); }
 }
 
 /* ── Cards ── */
@@ -508,7 +515,7 @@ p { max-width: var(--measure); }
   font-size: var(--fs-label);
   letter-spacing: var(--ls-label);
   text-transform: uppercase;
-  color: var(--stone);
+  color: var(--silver);
   text-align: center;
   padding: var(--sp-4);
 }
@@ -595,6 +602,8 @@ p { max-width: var(--measure); }
 }
 
 .form-note { font-size: var(--fs-caption); color: var(--stone); }
+.surface-dark .form-note { color: var(--silver); }
+.surface-dark .form-note a { color: var(--silver); }
 
 /* ── Partner logos — SHIPS HIDDEN. See markup comments. ── */
 .partner-logos[hidden] { display: none; }
@@ -658,7 +667,7 @@ p { max-width: var(--measure); }
   font-size: var(--fs-label);
   letter-spacing: var(--ls-label);
   text-transform: uppercase;
-  color: var(--stone);
+  color: var(--silver);
   margin-bottom: var(--sp-4);
 }
 .site-footer__legal {
@@ -667,7 +676,7 @@ p { max-width: var(--measure); }
   justify-content: space-between;
   gap: var(--sp-3);
   padding-top: var(--sp-6);
-  color: var(--stone);
+  color: var(--silver);
 }
 @media (max-width: 800px) {
   .site-footer__grid { grid-template-columns: 1fr; gap: var(--sp-8); }
@@ -705,7 +714,7 @@ p { max-width: var(--measure); }
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.14em;
-  fill: var(--silver);
+  fill: var(--stone);
 }
 @media (prefers-reduced-motion: no-preference) {
   .js [data-draw] .loop-line {
