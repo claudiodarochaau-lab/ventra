@@ -229,7 +229,7 @@
 
     .nav-mobile-links li a {
       display: block;
-      font-size: 1.0625rem;
+      font-size: var(--fs-body-sm);
       font-weight: var(--fw-medium);
       color: var(--silver);
       text-decoration: none;
@@ -322,10 +322,10 @@
     }
 
     .img-feature-content .section-label { color: var(--silver); }
-    .img-feature-content h2 { font-size: clamp(24px,3vw,36px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; color: var(--white); margin-bottom: 20px; }
-    .img-feature-content p { font-size: 15px; color: var(--mist); line-height: 1.75; margin-bottom: 12px; }
+    .img-feature-content h2 { font-size: var(--fs-h2); font-weight: var(--fw-bold); letter-spacing: var(--ls-tight); line-height: var(--lh-heading); color: var(--white); margin-bottom: 20px; }
+    .img-feature-content p { font-size: var(--fs-body-sm); color: var(--mist); line-height: var(--lh-body); margin-bottom: 12px; }
     .img-feature-content p:last-child { margin-bottom: 0; }
-    .img-feature-content a { font-size: 0.8125rem; font-weight: var(--fw-medium); color: var(--silver); text-decoration: none; }
+    .img-feature-content a { font-size: var(--fs-ui); font-weight: var(--fw-medium); color: var(--silver); text-decoration: none; }
     .img-feature-content a:hover { color: var(--white); }
 
     /* ─── LATTE STEAM CTA ── */
@@ -371,7 +371,7 @@
       flex-wrap: wrap;
     }
 
-    .latte-cta-inner h2 { font-size: clamp(22px,2.5vw,32px); color: var(--white); margin: 0; }
+    .latte-cta-inner h2 { font-size: var(--fs-h2); color: var(--white); margin: 0; }
 
     @media (max-width: 860px) {
       .img-feature { grid-template-columns: 1fr; min-height: auto; }
@@ -390,17 +390,18 @@
     }
 
     .hero-tagline {
+      font-family: var(--font-serif);
       font-size: clamp(18px, 2.2vw, 24px);
       font-style: italic;
-      font-weight: 400;
+      font-weight: var(--fw-regular);
       color: var(--silver);
       letter-spacing: 0.01em;
       margin-bottom: 20px;
     }
 
     .hero-sub {
-      font-size: 18px;
-      line-height: 1.75;
+      font-size: var(--fs-h3);
+      line-height: var(--lh-body);
       color: var(--silver);
       max-width: 600px;
       margin-bottom: 40px;
@@ -454,18 +455,18 @@
 
     .stat-value {
       display: block;
-      font-size: 13px;
-      font-weight: 700;
+      font-size: var(--fs-caption);
+      font-weight: var(--fw-bold);
       color: var(--white);
-      letter-spacing: 0.02em;
+      letter-spacing: var(--ls-ui);
       margin-bottom: 4px;
     }
 
     .stat-label {
       display: block;
-      font-size: 12px;
+      font-size: var(--fs-caption);
       color: var(--silver);
-      line-height: 1.4;
+      line-height: var(--lh-heading);
     }
 
     /* ─── VP STRIP ───────────────────────────────────── */
@@ -503,24 +504,24 @@
     }
 
     .vp-card-title {
-      font-size: clamp(20px, 2.5vw, 28px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-size: var(--fs-h2);
+      font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-tight);
       color: var(--black);
       margin-bottom: 16px;
-      line-height: 1.2;
+      line-height: var(--lh-heading);
     }
 
     .vp-card-body {
-      font-size: 15px;
+      font-size: var(--fs-body-sm);
       color: var(--graphite);
-      line-height: 1.75;
+      line-height: var(--lh-body);
       margin-bottom: 28px;
       flex-grow: 1;
     }
 
     .vp-card-link {
-      font-size: 0.8125rem;
+      font-size: var(--fs-ui);
       font-weight: var(--fw-medium);
       color: var(--black);
       text-decoration: none;
@@ -547,7 +548,7 @@
     }
 
     .why-ventra-title {
-      font-size: clamp(28px, 3.5vw, 44px);
+      font-size: var(--fs-h1);
       color: var(--white);
       margin-bottom: 52px;
       max-width: 560px;
@@ -568,9 +569,9 @@
     }
 
     .pillar-body {
-      font-size: 14px;
+      font-size: var(--fs-ui);
       color: var(--silver);
-      line-height: 1.7;
+      line-height: var(--lh-body);
     }
 
     /* ─── SECTOR CALLOUT ─────────────────────────────── */
@@ -596,25 +597,25 @@
     }
 
     .sector-callout-title {
-      font-size: clamp(22px, 2.5vw, 30px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-size: var(--fs-h2);
+      font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-tight);
       color: var(--white);
       margin-bottom: 14px;
     }
 
     .sector-callout-body {
-      font-size: 15px;
+      font-size: var(--fs-body-sm);
       color: rgba(255,255,255,0.65);
-      line-height: 1.75;
+      line-height: var(--lh-body);
       max-width: 580px;
     }
 
     /* ─── TWO-MACHINE MODEL (kept for CSS reference) ── */
     .solution-card-body {
-      font-size: 15px;
+      font-size: var(--fs-body-sm);
       color: var(--silver);
-      line-height: 1.7;
+      line-height: var(--lh-body);
       margin-bottom: 28px;
     }
 
@@ -626,9 +627,9 @@
     }
 
     .pill {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
+      font-size: var(--fs-label);
+      font-weight: var(--fw-medium);
+      letter-spacing: var(--ls-btn);
       text-transform: uppercase;
       padding: 6px 14px;
       border: 1px solid rgba(255,255,255,0.2);
@@ -640,14 +641,14 @@
       background: rgba(255,255,255,0.06);
       border-left: 3px solid var(--silver);
       padding: 18px 20px;
-      font-size: 13px;
+      font-size: var(--fs-caption);
       color: var(--silver);
-      line-height: 1.6;
+      line-height: var(--lh-body);
     }
 
     .revenue-callout strong {
       color: var(--white);
-      font-weight: 700;
+      font-weight: var(--fw-bold);
     }
 
     /* ─── HOW IT WORKS ───────────────────────────────── */
@@ -662,7 +663,7 @@
     }
 
     .hiw-title {
-      font-size: clamp(28px, 3.5vw, 44px);
+      font-size: var(--fs-h1);
       margin-bottom: 60px;
       max-width: 540px;
     }
@@ -704,9 +705,9 @@
     }
 
     .step-body {
-      font-size: 14px;
+      font-size: var(--fs-ui);
       color: var(--graphite);
-      line-height: 1.7;
+      line-height: var(--lh-body);
     }
 
     /* ─── PRICING ────────────────────────────────────── */
@@ -721,16 +722,16 @@
     }
 
     .pricing-title {
-      font-size: clamp(28px, 3.5vw, 44px);
+      font-size: var(--fs-h1);
       margin-bottom: 16px;
     }
 
     .pricing-intro {
-      font-size: 15px;
+      font-size: var(--fs-body-sm);
       color: var(--graphite);
       max-width: 640px;
       margin-bottom: 52px;
-      line-height: 1.75;
+      line-height: var(--lh-body);
     }
 
     .pricing-cards {
@@ -758,11 +759,11 @@
     }
 
     .pricing-card-price {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-size: var(--fs-h3);
+      font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-tight);
       margin-bottom: 16px;
-      line-height: 1.2;
+      line-height: var(--lh-heading);
     }
 
     .pricing-card-range {
@@ -773,18 +774,18 @@
     }
 
     .pricing-card-desc {
-      font-size: 13px;
+      font-size: var(--fs-caption);
       color: var(--silver);
-      line-height: 1.6;
+      line-height: var(--lh-body);
       margin-top: auto;
       padding-top: 16px;
       border-top: 1px solid var(--mist);
     }
 
     .pricing-note {
-      font-size: 13px;
+      font-size: var(--fs-caption);
       color: var(--graphite);
-      line-height: 1.7;
+      line-height: var(--lh-body);
       margin-bottom: 40px;
       max-width: 680px;
     }
@@ -809,7 +810,7 @@
     }
 
     .about-title {
-      font-size: clamp(26px, 3vw, 40px);
+      font-size: var(--fs-h1);
       margin-bottom: 24px;
     }
 
@@ -823,15 +824,15 @@
     }
 
     .about-body {
-      font-size: 15px;
+      font-size: var(--fs-body-sm);
       color: var(--graphite);
-      line-height: 1.75;
+      line-height: var(--lh-body);
     }
 
     .about-why-title {
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
+      font-size: var(--fs-ui);
+      font-weight: var(--fw-bold);
+      letter-spacing: var(--ls-tight);
       margin-bottom: 20px;
       color: var(--black);
     }
@@ -844,9 +845,9 @@
     }
 
     .about-why-list li {
-      font-size: 14px;
+      font-size: var(--fs-ui);
       color: var(--graphite);
-      line-height: 1.6;
+      line-height: var(--lh-body);
       padding-left: 20px;
       position: relative;
     }
@@ -856,7 +857,7 @@
       position: absolute;
       left: 0;
       color: var(--silver);
-      font-weight: 400;
+      font-weight: var(--fw-regular);
     }
 
     /* ─── CONTACT ────────────────────────────────────── */
@@ -876,7 +877,7 @@
     }
 
     .contact-title {
-      font-size: clamp(26px, 3vw, 40px);
+      font-size: var(--fs-h1);
       color: var(--white);
       margin-bottom: 36px;
     }
@@ -911,8 +912,8 @@
     .form-group select,
     .form-group textarea {
       font-family: var(--font-sans);
-      font-size: 14px;
-      font-weight: 400;
+      font-size: var(--fs-ui);
+      font-weight: var(--fw-regular);
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.15);
       color: var(--white);
@@ -954,7 +955,7 @@
 
     .form-confirmation {
       display: none;
-      font-size: 15px;
+      font-size: var(--fs-body-sm);
       color: var(--white);
       background: rgba(255,255,255,0.06);
       border-left: 3px solid var(--silver);
@@ -980,15 +981,15 @@
     }
 
     .contact-info-block p {
-      font-size: 14px;
+      font-size: var(--fs-ui);
       color: var(--silver);
-      line-height: 1.7;
+      line-height: var(--lh-body);
     }
 
     .contact-info-block a {
       color: var(--white);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: var(--fw-medium);
     }
 
     .contact-info-block a:hover {
@@ -1029,10 +1030,10 @@
     }
 
     .footer-left p {
-      font-size: 13px;
+      font-size: var(--fs-caption);
       font-weight: var(--fw-light);
       color: var(--silver);
-      line-height: 1.6;
+      line-height: var(--lh-body);
     }
 
     .footer-right {
@@ -1040,10 +1041,10 @@
     }
 
     .footer-right p {
-      font-size: 12px;
+      font-size: var(--fs-caption);
       font-weight: var(--fw-light);
       color: var(--silver);
-      line-height: 1.7;
+      line-height: var(--lh-body);
     }
 
     /* ─── RESPONSIVE ─────────────────────────────────── */
@@ -1336,7 +1337,7 @@
     <div style="max-width:1200px;margin:0 auto;display:flex;gap:48px;flex-wrap:wrap;align-items:flex-start;">
       <div style="flex:1;min-width:280px;">
         <p class="section-label">Start with zero risk</p>
-        <h2 class="section-title" style="font-size:clamp(26px,3.5vw,40px);color:var(--white);margin-bottom:20px;">Start with a 30-Day Trial. No Commitment Required.</h2>
+        <h2 class="section-title" style="font-size:var(--fs-h1);color:var(--white);margin-bottom:20px;">Start with a 30-Day Trial. No Commitment Required.</h2>
         <p style="font-size:15px;color:var(--silver);line-height:1.75;margin-bottom:36px;">We install a machine sized to your site. Your team experiences the full service - the coffee, the replenishment, the maintenance response - all of it. No long-term commitment until you have seen it work. Most organisations that trial convert to a full 36-month partnership. That is not an accident.</p>
         <a href="#contact" class="btn btn-dark">Start Your 30-Day Trial</a>
         <p style="font-size:13px;color:var(--silver);margin-top:20px;">Or contact us directly: <a href="mailto:sales@ventracoffee.com.au" style="color:var(--silver);">sales@ventracoffee.com.au</a> &nbsp;·&nbsp; +61 257 007 038</p>
