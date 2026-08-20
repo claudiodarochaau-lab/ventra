@@ -212,7 +212,7 @@
     /* ─── PARTNER LOGO STRIP ─────────────────────────────── */
 
     #partners {
-      background: var(--mist);
+      background: var(--graphite);
       padding: 48px 32px;
     }
 
@@ -224,20 +224,21 @@
 
     .partners-inner .section-label {
       text-align: center;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
     .partners-logos {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 56px;
+      gap: 64px;
       flex-wrap: wrap;
     }
 
     .partner-logo-slot {
-      height: 40px;
-      width: 140px;
+      height: 52px;
+      display: flex;
+      align-items: center;
     }
 
     .partner-logo-slot img {
@@ -246,6 +247,9 @@
       max-width: 100%;
       object-fit: contain;
     }
+
+    .partner-logo-slot.franke img { height: 100%; }
+    .partner-logo-slot.pnr img { height: 60%; }
 
     /* ─── CSU PROOF ──────────────────────────────────────── */
 
@@ -441,13 +445,11 @@
     <div class="partners-inner">
       <p class="section-label">In partnership with</p>
       <div class="partners-logos">
-        <div class="partner-logo-slot">
-          <!-- TODO: Franke / P&R logo assets pending. Replace this div's contents with:
-               <img src="/assets/images/franke-logo.svg" alt="Franke"> -->
+        <div class="partner-logo-slot franke">
+          <img src="../assets/images/franke-logo-white.svg" alt="Franke">
         </div>
-        <div class="partner-logo-slot">
-          <!-- TODO: Franke / P&R logo assets pending. Replace this div's contents with:
-               <img src="/assets/images/pablo-rustys-logo.svg" alt="Pablo & Rusty's"> -->
+        <div class="partner-logo-slot pnr">
+          <img src="../assets/images/pablo-rustys-logo-white.svg" alt="Pablo & Rusty's">
         </div>
       </div>
     </div>
