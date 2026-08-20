@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /thank-you
+Disallow: /aiec2026
 
 Sitemap: https://ventracoffee.com.au/sitemap.xml
