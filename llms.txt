@@ -33,7 +33,7 @@ A fixed per-site base fee (equipment, service, telemetry, management) plus a
 consumption component that scales with cups poured (beans, milk,
 consumables). Tailored per institution and presented in full before
 signing; no published rate card. Multi-campus agreements run under one
-agreement with one invoice. Details: https://ventracoffee.com.au/pricing
+agreement with one invoice.
 
 ## Company
 
@@ -46,6 +46,5 @@ agreement with one invoice. Details: https://ventracoffee.com.au/pricing
 
 - [How it works](https://ventracoffee.com.au/how-it-works): full service anatomy
 - [Higher education](https://ventracoffee.com.au/higher-education): the campus model
-- [Pricing](https://ventracoffee.com.au/pricing): how the commercial structure works
 - [FAQ](https://ventracoffee.com.au/faq): direct answers
 - [About](https://ventracoffee.com.au/about): the founder and the company

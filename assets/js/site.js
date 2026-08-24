@@ -59,6 +59,60 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  // Promo carousel — a plain scroll-snap track; JS syncs the dots/arrows
+  // to scroll position and drives autoplay (paused on hover/focus, off
+  // entirely under prefers-reduced-motion).
+  var track = document.getElementById('carousel-track');
+  if (track) {
+    var slides = Array.prototype.slice.call(track.children);
+    var dots = Array.prototype.slice.call(document.querySelectorAll('.carousel__dot'));
+    var prevBtn = document.querySelector('.carousel__arrow--prev');
+    var nextBtn = document.querySelector('.carousel__arrow--next');
+    var current = 0;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var autoplay;
+
+    function goTo(i) {
+      current = (i + slides.length) % slides.length;
+      slides[current].scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest', inline: 'start' });
+    }
+    function setActiveDot(i) {
+      dots.forEach(function (d, di) { d.setAttribute('aria-selected', String(di === i)); });
+    }
+    function startAutoplay() {
+      if (reduceMotion) return;
+      autoplay = setInterval(function () { goTo(current + 1); }, 6000);
+    }
+    function resetAutoplay() {
+      clearInterval(autoplay);
+      startAutoplay();
+    }
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { goTo(i); resetAutoplay(); });
+    });
+    if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); resetAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1); resetAutoplay(); });
+
+    if ('IntersectionObserver' in window) {
+      var trackIo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            var i = slides.indexOf(e.target);
+            if (i > -1) { current = i; setActiveDot(i); }
+          }
+        });
+      }, { root: track, threshold: 0.6 });
+      slides.forEach(function (s) { trackIo.observe(s); });
+    }
+
+    startAutoplay();
+    track.addEventListener('mouseenter', function () { clearInterval(autoplay); });
+    track.addEventListener('mouseleave', startAutoplay);
+    track.addEventListener('focusin', function () { clearInterval(autoplay); });
+    track.addEventListener('focusout', startAutoplay);
+  }
+
   var toggle = document.querySelector('.nav-toggle');
   var menu = document.getElementById('nav-mobile');
   if (!toggle || !menu) return;

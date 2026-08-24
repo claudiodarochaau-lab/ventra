@@ -664,6 +664,119 @@ p { max-width: var(--measure); }
   margin-top: var(--sp-8);
 }
 
+/* ── Promo carousel — full-bleed scroll-snap track on the home page.
+     Native swipe/scroll on touch; JS only syncs dots/arrows and autoplay. ── */
+.carousel {
+  position: relative;
+  background: var(--ventra-black);
+  border-bottom: 1px solid var(--graphite);
+}
+.carousel__track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.carousel__track::-webkit-scrollbar { display: none; }
+.carousel__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: var(--sp-16) calc(var(--gutter) + 64px);
+  text-decoration: none;
+  color: var(--white);
+  box-sizing: border-box;
+}
+.carousel__slide__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--sp-3);
+  width: 100%;
+  max-width: var(--maxw);
+}
+.carousel__slide .section-label { margin-bottom: 0; }
+.carousel__slide h2 {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+.carousel__slide h2::after {
+  content: '';
+  width: 15px;
+  height: 22px;
+  flex-shrink: 0;
+  background: currentColor;
+  clip-path: polygon(0 0, 0 18%, 78% 50%, 0 82%, 0 100%, 100% 58%, 100% 42%);
+  transition: transform 0.15s ease;
+}
+.carousel__slide:hover h2::after,
+.carousel__slide:focus-visible h2::after { transform: translateX(6px); }
+
+.carousel__controls {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--sp-4);
+  pointer-events: none;
+}
+.carousel__arrow {
+  pointer-events: auto;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ventra-black);
+  border: 1px solid var(--slate);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+.carousel__arrow:hover { border-color: var(--silver); }
+.carousel__arrow::before {
+  content: '';
+  width: 9px;
+  height: 13px;
+  background: var(--silver);
+}
+.carousel__arrow--prev::before { clip-path: polygon(100% 0, 100% 18%, 22% 50%, 100% 82%, 100% 100%, 0 58%, 0 42%); }
+.carousel__arrow--next::before { clip-path: polygon(0 0, 0 18%, 78% 50%, 0 82%, 0 100%, 100% 58%, 100% 42%); }
+
+.carousel__dots {
+  position: absolute;
+  left: 50%;
+  bottom: var(--sp-6);
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--sp-3);
+  pointer-events: auto;
+}
+.carousel__dot {
+  width: 22px;
+  height: 3px;
+  background: var(--graphite);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.carousel__dot[aria-selected="true"] { background: var(--silver); }
+
+@media (max-width: 700px) {
+  .carousel__slide { min-height: 220px; padding: var(--sp-16) var(--gutter); }
+  .carousel__arrow { display: none; }
+}
+
 /* ── Footer ── */
 .site-footer {
   background: var(--ventra-black);
@@ -776,6 +889,15 @@ p { max-width: var(--measure); }
   margin-bottom: var(--sp-4);
 }
 .surface-light .card-icon, .surface-white .card-icon { stroke: var(--stone); }
+
+/* ── Supplier brand marks — used inline in cards to name the actual
+     equipment/roasting partner, not just the category. ── */
+.card .brand-logo {
+  height: 26px;
+  width: auto;
+  margin: var(--sp-3) 0 var(--sp-4);
+}
+.card .brand-logo--pnr { height: 15px; }
 
 /* ── Back to top — injected by site.js ── */
 .back-to-top {
