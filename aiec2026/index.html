@@ -150,7 +150,7 @@
     }
 
     .brand-logo img {
-      height: 56px;
+      height: 73px;
       width: auto;
       display: block;
     }
@@ -234,6 +234,19 @@
       margin: 40px auto 0;
     }
 
+    .photo-caption {
+      font-size: var(--fs-caption);
+      font-weight: var(--fw-light);
+      color: var(--silver);
+      line-height: var(--lh-body);
+    }
+
+    .why-ventra-caption {
+      max-width: 640px;
+      margin: 12px auto 0;
+      text-align: center;
+    }
+
     /* ─── PARTNER LOGO STRIP ─────────────────────────────── */
 
     #partners {
@@ -284,7 +297,7 @@
     }
 
     .csu-inner {
-      max-width: 780px;
+      max-width: 980px;
       margin: 0 auto;
     }
 
@@ -294,21 +307,47 @@
       font-size: var(--fs-body-sm);
       color: var(--silver);
       text-align: center;
-      margin-bottom: 32px;
+      margin-bottom: 48px;
+    }
+
+    /* Photo and quote columns share a height (align-items: stretch); the photo
+       is cropped with object-fit to that exact height so both columns line up
+       top and tail — image top to quote top, caption/attribution bottoms level. */
+    .csu-content {
+      display: flex;
+      align-items: stretch;
+      gap: 48px;
+    }
+
+    .csu-photo-col {
+      flex: 0 0 38%;
+      display: flex;
+      flex-direction: column;
     }
 
     .csu-photo {
       display: block;
       width: 100%;
-      max-width: 560px;
-      height: auto;
-      margin: 0 auto 40px;
+      flex: 1 1 auto;
+      min-height: 0;
+      object-fit: cover;
+    }
+
+    .csu-caption {
+      margin-top: 12px;
+    }
+
+    .csu-quote-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .pull-quote {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      font-size: clamp(1.125rem, 2.4vw, 1.5rem);
       line-height: 1.5;
       color: var(--graphite);
       letter-spacing: -0.01em;
@@ -322,6 +361,20 @@
       font-weight: var(--fw-medium);
       color: var(--black);
       margin-top: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .csu-content {
+        flex-direction: column;
+      }
+
+      .csu-photo-col {
+        flex: 0 0 auto;
+      }
+
+      .csu-photo {
+        max-height: 360px;
+      }
     }
 
     /* ─── MEET US AT AIEC (booking widget) ───────────────── */
@@ -515,6 +568,7 @@
       <p class="section-label">Why Ventra</p>
       <p class="why-ventra-body">Great coffee is a small signal of a big investment: that an institution genuinely cares about student and staff experience. Ventra brings equipment, beans, and service under one accountable partner, with no capital outlay and a commercial model flexible enough to run free, blended, or fully paid.</p>
       <img src="First%20Ventra%20Students_bw.webp" alt="Students enjoying Ventra-managed coffee on campus" class="why-ventra-photo" loading="lazy">
+      <p class="photo-caption why-ventra-caption">Students at Charles Sturt University Sydney campus, enjoying their Ventra coffees</p>
     </div>
   </section>
 
@@ -537,12 +591,17 @@
   <section id="csu-proof">
     <div class="csu-inner">
       <p class="csu-live-since">Live at Charles Sturt University's North Sydney and Melbourne campuses since August 2026.</p>
-      <img src="Ventra-CSU%20Handshake.webp" alt="Ventra and Charles Sturt University sealing the partnership" class="csu-photo" loading="lazy">
-      <!-- PLACEHOLDER: awaiting Andrew Knight approval, do not treat as final -->
-      <blockquote>
-        <p class="pull-quote">"What impressed me most was how little I had to think about it. Ventra managed the entire install across both our North Sydney and Melbourne campuses, and since then it's just worked. No capital outlay on our end, no juggling separate suppliers, and consistently good coffee our students and staff actually notice."</p>
-        <footer class="csu-attribution">Andrew Knight, Campus Director &amp; Principal, CSU</footer>
-      </blockquote>
+      <div class="csu-content">
+        <figure class="csu-photo-col">
+          <img src="Ventra-CSU%20Handshake.webp" alt="Ventra and Charles Sturt University sealing the partnership" class="csu-photo" loading="lazy">
+          <figcaption class="photo-caption csu-caption">Andrew Knight, Campus Director and Principal, CSU; Claudio Da Rocha, CEO and Founder, Ventra Coffee</figcaption>
+        </figure>
+        <!-- PLACEHOLDER: awaiting Andrew Knight approval, do not treat as final -->
+        <blockquote class="csu-quote-col">
+          <p class="pull-quote">"What impressed me most was how little I had to think about it. Ventra managed the entire install across both our North Sydney and Melbourne campuses, and since then it's just worked. No capital outlay on our end, no juggling separate suppliers, and consistently good coffee our students and staff actually notice."</p>
+          <footer class="csu-attribution">Andrew Knight, Campus Director &amp; Principal, CSU</footer>
+        </blockquote>
+      </div>
     </div>
   </section>
 
@@ -551,7 +610,7 @@
     <div class="meet-us-inner">
       <p class="section-label">Meet us at AIEC</p>
       <h2 class="section-title meet-us-title">Book 15 minutes with us</h2>
-      <p class="meet-us-copy">Talk through your campus coffee setup and how Ventra can improve student and staff experience, equipment, beans, and service, under one accountable partner. No pitch, just a conversation.</p>
+      <p class="meet-us-copy">Talk through your campus coffee setup and how Ventra can improve student and staff experience - exceptional equipment, beans, and service, under one accountable partner. No pitch, just a conversation.</p>
     </div>
     <div class="meet-us-widget">
       <!-- Start of Meetings Embed Script -->
@@ -587,7 +646,7 @@
   <footer id="footer">
     <div class="footer-inner">
       <div class="footer-left">
-        <img src="../logo-dark.svg" style="height:56px;width:auto;display:block;" alt="Ventra Coffee">
+        <img src="../logo-dark.svg" style="height:73px;width:auto;display:block;" alt="Ventra Coffee">
         <p style="max-width:360px;">Australia's managed coffee partner. Premium specialty coffee, fully managed, one monthly subscription.</p>
         <p>Sydney &nbsp;·&nbsp; Melbourne</p>
       </div>
