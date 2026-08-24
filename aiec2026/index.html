@@ -137,7 +137,7 @@
     /* ─── HEADER (logo only — no nav, this page is a standalone campaign CTA) ── */
 
     #brand-header {
-      padding: 28px 32px;
+      padding: 16px 32px;
     }
 
     .brand-header-inner {
@@ -150,7 +150,7 @@
     }
 
     .brand-logo img {
-      height: 73px;
+      height: 99px;
       width: auto;
       display: block;
     }
@@ -310,38 +310,39 @@
       margin-bottom: 48px;
     }
 
-    /* Photo and quote columns share a height (align-items: stretch); the photo
-       is cropped with object-fit to that exact height so both columns line up
-       top and tail — image top to quote top, caption/attribution bottoms level. */
+    /* Grid keeps the caption out of the height the quote column stretches to
+       match, so the quote is sized to the photo alone (row "photo"), and the
+       bottom-anchored attribution lines up with the bottom of the photo
+       itself — not the caption sitting below it in the second row. */
     .csu-content {
-      display: flex;
+      display: grid;
+      grid-template-columns: 38% 1fr;
+      grid-template-areas:
+        "photo quote"
+        "caption .";
+      column-gap: 48px;
       align-items: stretch;
-      gap: 48px;
-    }
-
-    .csu-photo-col {
-      flex: 0 0 38%;
-      display: flex;
-      flex-direction: column;
     }
 
     .csu-photo {
+      grid-area: photo;
       display: block;
       width: 100%;
-      flex: 1 1 auto;
-      min-height: 0;
+      height: 100%;
       object-fit: cover;
     }
 
     .csu-caption {
+      grid-area: caption;
       margin-top: 12px;
     }
 
     .csu-quote-col {
-      flex: 1;
+      grid-area: quote;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-end;
+      min-height: 0;
     }
 
     .pull-quote {
@@ -365,15 +366,21 @@
 
     @media (max-width: 700px) {
       .csu-content {
-        flex-direction: column;
-      }
-
-      .csu-photo-col {
-        flex: 0 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "photo"
+          "caption"
+          "quote";
+        row-gap: 0;
       }
 
       .csu-photo {
+        height: auto;
         max-height: 360px;
+      }
+
+      .csu-quote-col {
+        margin-top: 32px;
       }
     }
 
@@ -592,10 +599,8 @@
     <div class="csu-inner">
       <p class="csu-live-since">Live at Charles Sturt University's North Sydney and Melbourne campuses since August 2026.</p>
       <div class="csu-content">
-        <figure class="csu-photo-col">
-          <img src="Ventra-CSU%20Handshake.webp" alt="Ventra and Charles Sturt University sealing the partnership" class="csu-photo" loading="lazy">
-          <figcaption class="photo-caption csu-caption">Andrew Knight, Campus Director and Principal, CSU; Claudio Da Rocha, CEO and Founder, Ventra Coffee</figcaption>
-        </figure>
+        <img src="Ventra-CSU%20Handshake.webp" alt="Ventra and Charles Sturt University sealing the partnership" class="csu-photo" loading="lazy">
+        <p class="photo-caption csu-caption">Andrew Knight, Campus Director and Principal, CSU; Claudio Da Rocha, CEO and Founder, Ventra Coffee</p>
         <!-- PLACEHOLDER: awaiting Andrew Knight approval, do not treat as final -->
         <blockquote class="csu-quote-col">
           <p class="pull-quote">"What impressed me most was how little I had to think about it. Ventra managed the entire install across both our North Sydney and Melbourne campuses, and since then it's just worked. No capital outlay on our end, no juggling separate suppliers, and consistently good coffee our students and staff actually notice."</p>
@@ -624,7 +629,7 @@
   <section id="contact">
     <div class="contact-inner">
       <h2 class="section-title contact-title">Enter the AIEC prize draw</h2>
-      <p class="contact-cta-copy">Be in line to win exciting prizes including a $200 Pablo &amp; Rusty's e-voucher, a 60-day free trial on your campus, and more to be announced.</p>
+      <p class="contact-cta-copy">Be in line to win exciting prizes including a $200 Pablo &amp; Rusty's e-voucher, a 60-day free trial on your campus, and more.</p>
       <script src="https://js-ap1.hsforms.net/forms/embed/442945735.js" defer></script>
       <div class="hs-form-frame" data-region="ap1" data-form-id="2f5f9696-182f-4776-9ed0-59654d8d12bd" data-portal-id="442945735"></div>
     </div>
@@ -635,7 +640,7 @@
     <details class="terms-details">
       <summary>AIEC 2026 Prize Draw: Terms &amp; Conditions</summary>
       <div class="terms-body">
-        <p>Entries open 1 September 2026 and close 30 October 2026. Submitting this form enters you into the draw. A number of winners will be drawn from all eligible entries submitted via this page, each receiving one prize. Prizes include a $200 Pablo &amp; Rusty's e-voucher, a 60-day free trial of the Ventra managed coffee service, and additional prizes to be announced.</p>
+        <p>Entries open 1 September 2026 and close 30 October 2026. Submitting this form enters you into the draw. Winners will be drawn from all eligible entries submitted via this page, each receiving one prize. Prizes include a $200 Pablo &amp; Rusty's e-voucher, a 60-day free trial of the Ventra managed coffee service, and additional prizes to be announced.</p>
         <p>If the free trial is won: the trial waives Ventra's standard monthly management fee for 60 days. Consumption during the trial is charged at $1 per cup. At the institution's discretion, the trial can be run on a paid consumption model, allowing revenue generated from student and staff purchases to offset the $1/cup consumption charge.</p>
         <p>Number of prizes and winners at Ventra's discretion. Full terms available on request. Ventra Coffee reserves the right to substitute any prize or adjust these terms.</p>
       </div>
