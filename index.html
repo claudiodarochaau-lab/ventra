@@ -121,66 +121,91 @@
 
   <main id="main">
 
-    <!-- ─── HERO - locked brand copy. Do not edit the H1 or support line. ─── -->
-    <section class="hero" aria-labelledby="hero-h">
-      <div class="hero__photo" aria-hidden="true">
-        <picture>
-          <source srcset="/assets/images/machine-hero.webp" type="image/webp">
-          <img src="/assets/images/machine-hero.webp" alt="" width="1400" height="933" loading="eager" fetchpriority="high">
-        </picture>
-      </div>
-      <div class="wrap hero__inner">
-        <h1 id="hero-h">Coffee, fully managed.</h1>
-        <p class="hero__support">Equipment. Beans. Service.<br>One partner, no downtime.</p>
-        <div class="hero__ctas">
-          <a href="/contact" class="btn btn--solid-light">Book a discovery meeting</a>
-          <a href="/contact?enquiry=proposal" class="btn btn--ghost-dark">Request a tailored proposal</a>
-        </div>
-        <!-- Telemetry strip - the signature element. Categorical statuses only.
-             GUARDRAIL: never add invented metrics (uptime %, cup counts,
-             client numbers) to this component. -->
-        <div class="telemetry" role="group" aria-label="What Ventra manages">
-          <div class="telemetry__item">
-            <span class="telemetry__key">EQUIPMENT</span>
-            <span class="telemetry__val">OPERATIONAL</span>
-          </div>
-          <div class="telemetry__item">
-            <span class="telemetry__key">CONSUMABLES</span>
-            <span class="telemetry__val">REPLENISHED</span>
-          </div>
-          <div class="telemetry__item">
-            <span class="telemetry__key">SERVICE</span>
-            <span class="telemetry__val">SCHEDULED</span>
-          </div>
-          <div class="telemetry__item">
-            <span class="telemetry__key">TELEMETRY</span>
-            <span class="telemetry__val">REPORTED</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- ─── HERO CAROUSEL - the whole top banner rotates. Slide 1 is the
+         locked brand hero (do not edit its H1 or support line); slides 2-4
+         are promo banners, each a single link. ─── -->
+    <section class="hero-carousel" role="region" aria-roledescription="carousel" aria-label="Ventra highlights">
+      <div class="hero-carousel__track" id="carousel-track">
 
-    <!-- ─── PROMO CAROUSEL ─── -->
-    <section class="carousel" role="region" aria-roledescription="carousel" aria-label="Ventra highlights">
-      <div class="carousel__track" id="carousel-track">
-        <a class="carousel__slide" href="/how-it-works" role="group" aria-roledescription="slide" aria-label="1 of 3">
+        <div class="hero-carousel__slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+          <section class="hero" aria-labelledby="hero-h">
+            <div class="hero__photo" aria-hidden="true">
+              <picture>
+                <source srcset="/assets/images/machine-hero.webp" type="image/webp">
+                <img src="/assets/images/machine-hero.webp" alt="" width="1400" height="683" loading="eager" fetchpriority="high">
+              </picture>
+            </div>
+            <div class="wrap hero__inner">
+              <h1 id="hero-h">Coffee, fully managed.</h1>
+              <p class="hero__support">Equipment. Beans. Service.<br>One partner, no downtime.</p>
+              <div class="hero__ctas">
+                <a href="/contact" class="btn btn--solid-light">Book a discovery meeting</a>
+                <a href="/contact?enquiry=proposal" class="btn btn--ghost-dark">Request a tailored proposal</a>
+              </div>
+              <!-- Telemetry strip - the signature element. Categorical statuses only.
+                   GUARDRAIL: never add invented metrics (uptime %, cup counts,
+                   client numbers) to this component. -->
+              <div class="telemetry" role="group" aria-label="What Ventra manages">
+                <div class="telemetry__item">
+                  <span class="telemetry__key">EQUIPMENT</span>
+                  <span class="telemetry__val">OPERATIONAL</span>
+                </div>
+                <div class="telemetry__item">
+                  <span class="telemetry__key">CONSUMABLES</span>
+                  <span class="telemetry__val">REPLENISHED</span>
+                </div>
+                <div class="telemetry__item">
+                  <span class="telemetry__key">SERVICE</span>
+                  <span class="telemetry__val">SCHEDULED</span>
+                </div>
+                <div class="telemetry__item">
+                  <span class="telemetry__key">TELEMETRY</span>
+                  <span class="telemetry__val">REPORTED</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <a class="carousel__slide" href="/how-it-works" role="group" aria-roledescription="slide" aria-label="2 of 4">
+          <div class="hero__photo" aria-hidden="true">
+            <picture>
+              <source srcset="/assets/images/machine-tap-to-pay.webp" type="image/webp">
+              <img src="/assets/images/machine-tap-to-pay.webp" alt="" width="1400" height="683" loading="lazy">
+            </picture>
+          </div>
           <span class="carousel__slide__inner">
             <span class="section-label">How it works</span>
             <h2>The managed model, end to end.</h2>
           </span>
         </a>
-        <a class="carousel__slide" href="/aiec2026" role="group" aria-roledescription="slide" aria-label="2 of 3">
+
+        <a class="carousel__slide" href="/aiec2026" role="group" aria-roledescription="slide" aria-label="3 of 4">
+          <div class="hero__photo" aria-hidden="true">
+            <picture>
+              <source srcset="/assets/images/students-aiec.webp" type="image/webp">
+              <img src="/assets/images/students-aiec.webp" alt="" width="694" height="520" loading="lazy" style="object-position: center 20%;">
+            </picture>
+          </div>
           <span class="carousel__slide__inner">
             <span class="section-label">Stand 111 &middot; 27&ndash;30 October</span>
             <h2>Meet us at AIEC.</h2>
           </span>
         </a>
-        <a class="carousel__slide" href="/contact" role="group" aria-roledescription="slide" aria-label="3 of 3">
+
+        <a class="carousel__slide" href="/contact" role="group" aria-roledescription="slide" aria-label="4 of 4">
+          <div class="hero__photo" aria-hidden="true">
+            <picture>
+              <source srcset="/assets/images/machine-latte-steam.webp" type="image/webp">
+              <img src="/assets/images/machine-latte-steam.webp" alt="" width="1400" height="683" loading="lazy">
+            </picture>
+          </div>
           <span class="carousel__slide__inner">
             <span class="section-label">Get started</span>
             <h2>Book a Discovery call.</h2>
           </span>
         </a>
+
       </div>
       <div class="carousel__controls">
         <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Previous slide"></button>
@@ -188,10 +213,17 @@
           <button type="button" class="carousel__dot" role="tab" aria-selected="true" aria-label="Slide 1"></button>
           <button type="button" class="carousel__dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
           <button type="button" class="carousel__dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+          <button type="button" class="carousel__dot" role="tab" aria-selected="false" aria-label="Slide 4"></button>
         </div>
         <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="Next slide"></button>
       </div>
     </section>
+
+    <!-- ─── FLOATING CTA - persistent side rail, home page only ─── -->
+    <div class="floating-cta" id="floating-cta">
+      <a href="/contact" class="btn btn--solid-light">Book a discovery meeting</a>
+      <a href="/contact?enquiry=proposal" class="btn btn--ghost-dark">Request a tailored proposal</a>
+    </div>
 
     <!-- ─── PROBLEM FRAMING ─── -->
     <section class="section surface-white" aria-labelledby="problem-h">

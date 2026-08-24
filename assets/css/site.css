@@ -664,14 +664,17 @@ p { max-width: var(--measure); }
   margin-top: var(--sp-8);
 }
 
-/* ── Promo carousel — full-bleed scroll-snap track on the home page.
-     Native swipe/scroll on touch; JS only syncs dots/arrows and autoplay. ── */
-.carousel {
+/* ── Hero carousel — the whole top banner rotates. Slide 1 is the full
+     brand hero (nested .hero section); slides 2-4 reuse .carousel__slide
+     as photo-backed promo banners. Native swipe/scroll on touch; JS only
+     syncs dots/arrows and autoplay. All slides share one row height via
+     the track's default flex stretch, so heights self-match slide 1. ── */
+.hero-carousel {
   position: relative;
   background: var(--ventra-black);
   border-bottom: 1px solid var(--graphite);
 }
-.carousel__track {
+.hero-carousel__track {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -679,21 +682,33 @@ p { max-width: var(--measure); }
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
-.carousel__track::-webkit-scrollbar { display: none; }
+.hero-carousel__track::-webkit-scrollbar { display: none; }
+.hero-carousel__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+/* Slides 2-4: photo-backed promo banners, same visual treatment as the
+   hero (reuses .hero__photo's grayscale + gradient) but a single link. */
 .carousel__slide {
   flex: 0 0 100%;
   width: 100%;
   scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
   padding: var(--sp-16) calc(var(--gutter) + 64px);
   text-decoration: none;
   color: var(--white);
+  background: var(--ventra-black);
   box-sizing: border-box;
 }
 .carousel__slide__inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -706,11 +721,13 @@ p { max-width: var(--measure); }
   display: inline-flex;
   align-items: center;
   gap: var(--sp-4);
+  font-size: var(--fs-h1);
+  max-width: 16ch;
 }
 .carousel__slide h2::after {
   content: '';
-  width: 15px;
-  height: 22px;
+  width: 18px;
+  height: 26px;
   flex-shrink: 0;
   background: currentColor;
   clip-path: polygon(0 0, 0 18%, 78% 50%, 0 82%, 0 100%, 100% 58%, 100% 42%);
@@ -773,8 +790,39 @@ p { max-width: var(--measure); }
 .carousel__dot[aria-selected="true"] { background: var(--silver); }
 
 @media (max-width: 700px) {
-  .carousel__slide { min-height: 220px; padding: var(--sp-16) var(--gutter); }
+  .carousel__slide { padding: var(--sp-16) var(--gutter); }
   .carousel__arrow { display: none; }
+}
+
+/* ── Floating CTA — persistent side rail on the home page. Hidden until
+     scrolled past the banner (site.js), hidden entirely below the header
+     breakpoint where the inline hero/CTA-band buttons already cover it. ── */
+.floating-cta {
+  position: fixed;
+  right: var(--sp-6);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 240;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  background: var(--ventra-black);
+  border: 1px solid var(--graphite);
+  border-radius: var(--radius);
+  padding: var(--sp-4);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) translateX(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.floating-cta.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) translateX(0);
+}
+.floating-cta .btn { white-space: nowrap; width: 100%; }
+@media (max-width: 900px) {
+  .floating-cta { display: none; }
 }
 
 /* ── Footer ── */

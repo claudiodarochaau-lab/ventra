@@ -74,7 +74,9 @@
 
     function goTo(i) {
       current = (i + slides.length) % slides.length;
-      slides[current].scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest', inline: 'start' });
+      // Scroll the track's own horizontal position directly - scrollIntoView
+      // would also pull the page's vertical scroll back toward the banner.
+      track.scrollTo({ left: slides[current].offsetLeft, behavior: reduceMotion ? 'auto' : 'smooth' });
     }
     function setActiveDot(i) {
       dots.forEach(function (d, di) { d.setAttribute('aria-selected', String(di === i)); });
@@ -111,6 +113,14 @@
     track.addEventListener('mouseleave', startAutoplay);
     track.addEventListener('focusin', function () { clearInterval(autoplay); });
     track.addEventListener('focusout', startAutoplay);
+  }
+
+  // Floating CTA panel — home page only (element absent elsewhere).
+  var floatingCta = document.getElementById('floating-cta');
+  if (floatingCta) {
+    window.addEventListener('scroll', function () {
+      floatingCta.classList.toggle('visible', window.scrollY > 500);
+    }, { passive: true });
   }
 
   var toggle = document.querySelector('.nav-toggle');
