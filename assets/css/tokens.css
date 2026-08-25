@@ -1,0 +1,128 @@
+/* ══════════════════════════════════════════════════════════════
+   VENTRA — DESIGN TOKENS
+   Single source of truth for colour, type, space, and geometry.
+   Derived from BRAND.md v1.0 (April 2026). Every component consumes
+   these tokens — no magic numbers in component CSS.
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Self-hosted fonts (latin subsets, WOFF2 only) ── */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/poppins-latin-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/poppins-latin-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/poppins-latin-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/poppins-latin-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/plex-mono-latin-400.woff2') format('woff2');
+}
+
+:root {
+  /* ── Colour — BRAND.md palette. Campaign colours are banned from
+       the website UI by brand rule; they do not exist here. ── */
+  --ventra-black: #0D0D0D;
+  --graphite:     #1E1E1E;
+  --slate:        #3A3A3A;
+  --stone:        #6B6B6B;
+  --silver:       #ABABAB;
+  --mist:         #D8D8D8;
+  --pearl:        #F2F2F0;
+  --white:        #FFFFFF;
+
+  /* Semantic aliases */
+  --surface-dark:     var(--ventra-black);
+  --surface-raised:   var(--graphite);
+  --surface-light:    var(--pearl);
+  --surface-white:    var(--white);
+  --text-on-dark:     var(--white);
+  --text-muted-dark:  var(--silver);
+  --text-on-light:    var(--ventra-black);
+  --text-muted-light: var(--stone);
+  --border-dark:      var(--slate);
+  --border-light:     var(--mist);
+  --accent:           var(--silver);
+
+  /* ── Type ── */
+  --font-sans:  'Poppins', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --font-mono:  'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-quote: Georgia, 'Times New Roman', Times, serif;
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semi:    600;
+  --fw-bold:    700;
+
+  /* Scale — 17px base, ~1.25 ratio, fluid at the top end */
+  --fs-display: clamp(2.5rem, 6.5vw, 4.25rem);
+  --fs-h1:      clamp(2rem, 4.5vw, 3.25rem);
+  --fs-h2:      clamp(1.6rem, 3.2vw, 2.35rem);
+  --fs-h3:      clamp(1.15rem, 2vw, 1.35rem);
+  --fs-body:    1.0625rem;   /* 17px */
+  --fs-sm:      0.9375rem;   /* 15px */
+  --fs-ui:      0.875rem;    /* 14px */
+  --fs-caption: 0.8125rem;   /* 13px */
+  --fs-label:   0.6875rem;   /* 11px */
+
+  --lh-display: 1.08;
+  --lh-heading: 1.2;
+  --lh-body:    1.7;
+
+  --ls-tight:  -0.02em;
+  --ls-ui:      0.02em;
+  --ls-label:   0.14em;
+  --ls-mono:    0.08em;
+
+  --measure: 66ch;
+
+  /* ── Space — 4px base ── */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-6:  1.5rem;
+  --sp-8:  2rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-24: 6rem;
+  --sp-32: 8rem;
+
+  /* ── Geometry — square-cornered brand; 32° is the V-mark
+       construction angle and the site's one diagonal. ── */
+  --radius: 2px;
+  --angle: 32deg;
+  /* tan(32°) ≈ 0.6249 — use for computing angled offsets */
+
+  /* ── Layout ── */
+  --maxw: 1160px;
+  --gutter: clamp(1.25rem, 4vw, 2rem);
+  --header-h: 72px;
+
+  /* ── Focus ── */
+  --focus-ring: 2px solid var(--silver);
+  --focus-offset: 3px;
+}
