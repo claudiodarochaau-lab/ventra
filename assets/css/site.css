@@ -771,7 +771,7 @@ p { max-width: var(--measure); }
   z-index: 2;
   display: flex;
   align-items: center;
-  gap: var(--sp-5);
+  gap: var(--sp-4);
 }
 .carousel__arrow {
   width: 44px;
@@ -816,7 +816,7 @@ p { max-width: var(--measure); }
   .carousel__slide__inner {
     flex: 1 1 55%;
     max-width: 100%;
-    padding: var(--sp-10) var(--gutter);
+    padding: var(--sp-8) var(--gutter);
   }
   .carousel__slide__photo {
     flex: 1 1 45%;
