@@ -760,19 +760,22 @@ p { max-width: var(--measure); }
 .carousel__slide:hover h2::after,
 .carousel__slide:focus-visible h2::after { transform: translateX(6px); }
 
+/* Controls sit as one row at the bottom of the banner, clear of the
+   copy - previously the arrows were vertically centered over the full
+   slide and landed on top of the headline text. */
 .carousel__controls {
   position: absolute;
-  inset: 0;
+  left: 50%;
+  bottom: var(--sp-6);
+  transform: translateX(-50%);
+  z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-inline: var(--sp-4);
-  pointer-events: none;
+  gap: var(--sp-5);
 }
 .carousel__arrow {
-  pointer-events: auto;
-  width: 80px;
-  height: 80px;
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -786,21 +789,16 @@ p { max-width: var(--measure); }
 .carousel__arrow:hover { border-color: var(--silver); }
 .carousel__arrow::before {
   content: '';
-  width: 18px;
-  height: 26px;
+  width: 11px;
+  height: 16px;
   background: var(--silver);
 }
 .carousel__arrow--prev::before { clip-path: polygon(100% 0, 100% 18%, 22% 50%, 100% 82%, 100% 100%, 0 58%, 0 42%); }
 .carousel__arrow--next::before { clip-path: polygon(0 0, 0 18%, 78% 50%, 0 82%, 0 100%, 100% 58%, 100% 42%); }
 
 .carousel__dots {
-  position: absolute;
-  left: 50%;
-  bottom: var(--sp-6);
-  transform: translateX(-50%);
   display: flex;
   gap: var(--sp-3);
-  pointer-events: auto;
 }
 .carousel__dot {
   width: 22px;
