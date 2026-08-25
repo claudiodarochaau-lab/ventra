@@ -700,7 +700,7 @@ p { max-width: var(--measure); }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--sp-16) calc(var(--gutter) + 64px);
+  padding: var(--sp-16) calc(var(--gutter) + 110px);
   text-decoration: none;
   color: var(--white);
   background: var(--ventra-black);
@@ -747,8 +747,8 @@ p { max-width: var(--measure); }
 }
 .carousel__arrow {
   pointer-events: auto;
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -762,8 +762,8 @@ p { max-width: var(--measure); }
 .carousel__arrow:hover { border-color: var(--silver); }
 .carousel__arrow::before {
   content: '';
-  width: 9px;
-  height: 13px;
+  width: 18px;
+  height: 26px;
   background: var(--silver);
 }
 .carousel__arrow--prev::before { clip-path: polygon(100% 0, 100% 18%, 22% 50%, 100% 82%, 100% 100%, 0 58%, 0 42%); }

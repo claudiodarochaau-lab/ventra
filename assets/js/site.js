@@ -59,31 +59,90 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  // Promo carousel — a plain scroll-snap track; JS syncs the dots/arrows
-  // to scroll position and drives autoplay (paused on hover/focus, off
-  // entirely under prefers-reduced-motion).
+  // Promo carousel — an infinite loop via cloned edge slides, so autoplay
+  // and the arrows always continue in the same visual direction instead of
+  // snapping backward when wrapping from the last slide to the first (or
+  // vice versa). The clones are inert (aria-hidden, untabbable); the real
+  // slides are what dots/URLs/AT ever land on. A debounced scroll listener
+  // is the single source of truth for "which slide are we resting on" -
+  // it works the same whether the rest was reached by autoplay, an arrow,
+  // a dot, or a manual swipe, and silently re-homes onto the matching real
+  // slide whenever we land on a clone.
   var track = document.getElementById('carousel-track');
   if (track) {
-    var slides = Array.prototype.slice.call(track.children);
+    var realSlides = Array.prototype.slice.call(track.children);
+    var n = realSlides.length;
     var dots = Array.prototype.slice.call(document.querySelectorAll('.carousel__dot'));
     var prevBtn = document.querySelector('.carousel__arrow--prev');
     var nextBtn = document.querySelector('.carousel__arrow--next');
-    var current = 0;
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var autoplay;
+    var autoplay, settleTimer;
 
-    function goTo(i) {
-      current = (i + slides.length) % slides.length;
-      // Scroll the track's own horizontal position directly - scrollIntoView
-      // would also pull the page's vertical scroll back toward the banner.
-      track.scrollTo({ left: slides[current].offsetLeft, behavior: reduceMotion ? 'auto' : 'smooth' });
+    function makeInert(el) {
+      el.setAttribute('aria-hidden', 'true');
+      if (el.hasAttribute('href')) el.setAttribute('tabindex', '-1');
+      el.querySelectorAll('a, button').forEach(function (child) { child.setAttribute('tabindex', '-1'); });
+      // Strip ids so a clone (e.g. the hero's h1#hero-h) never duplicates
+      // one already in the live DOM - aria-labelledby et al stay resolvable.
+      el.removeAttribute('id');
+      el.querySelectorAll('[id]').forEach(function (child) { child.removeAttribute('id'); });
     }
-    function setActiveDot(i) {
-      dots.forEach(function (d, di) { d.setAttribute('aria-selected', String(di === i)); });
+
+    var firstClone = realSlides[0].cloneNode(true);
+    var lastClone = realSlides[n - 1].cloneNode(true);
+    makeInert(firstClone);
+    makeInert(lastClone);
+    track.insertBefore(lastClone, realSlides[0]);
+    track.appendChild(firstClone);
+
+    // slides[0] = lastClone, slides[1..n] = the real slides, slides[n+1] = firstClone
+    var slides = Array.prototype.slice.call(track.children);
+    var pos = 1;
+
+    function setActiveDot(realIdx) {
+      dots.forEach(function (d, di) { d.setAttribute('aria-selected', String(di === realIdx)); });
     }
+    function scrollToPos(p, animate) {
+      if (animate && !reduceMotion) {
+        track.scrollTo({ left: slides[p].offsetLeft, behavior: 'smooth' });
+        return;
+      }
+      // The CSS scroll-behavior:smooth on the track can override behavior:'auto'
+      // here, so the clone-to-real snap-back would visibly animate backward
+      // instead of jumping instantly. Toggle the CSS property off for the jump.
+      var prevBehavior = track.style.scrollBehavior;
+      track.style.scrollBehavior = 'auto';
+      track.scrollLeft = slides[p].offsetLeft;
+      track.style.scrollBehavior = prevBehavior;
+    }
+    function next() { scrollToPos(pos + 1, true); }
+    function prev() { scrollToPos(pos - 1, true); }
+    function goToReal(realIdx) { pos = realIdx + 1; scrollToPos(pos, true); }
+
+    function handleSettled() {
+      // Find whichever slide is now nearest the track's centre - covers
+      // programmatic scrolls and manual swipes/drags alike.
+      var trackRect = track.getBoundingClientRect();
+      var center = trackRect.left + trackRect.width / 2;
+      var closest = pos, closestDist = Infinity;
+      slides.forEach(function (s, i) {
+        var r = s.getBoundingClientRect();
+        var dist = Math.abs((r.left + r.width / 2) - center);
+        if (dist < closestDist) { closestDist = dist; closest = i; }
+      });
+      pos = closest;
+      if (pos === 0) { pos = n; scrollToPos(pos, false); }
+      else if (pos === n + 1) { pos = 1; scrollToPos(pos, false); }
+      setActiveDot(pos - 1);
+    }
+    track.addEventListener('scroll', function () {
+      clearTimeout(settleTimer);
+      settleTimer = setTimeout(handleSettled, 120);
+    }, { passive: true });
+
     function startAutoplay() {
       if (reduceMotion) return;
-      autoplay = setInterval(function () { goTo(current + 1); }, 6000);
+      autoplay = setInterval(next, 6000);
     }
     function resetAutoplay() {
       clearInterval(autoplay);
@@ -91,23 +150,13 @@
     }
 
     dots.forEach(function (dot, i) {
-      dot.addEventListener('click', function () { goTo(i); resetAutoplay(); });
+      dot.addEventListener('click', function () { goToReal(i); resetAutoplay(); });
     });
-    if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); resetAutoplay(); });
-    if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1); resetAutoplay(); });
+    if (prevBtn) prevBtn.addEventListener('click', function () { prev(); resetAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { next(); resetAutoplay(); });
 
-    if ('IntersectionObserver' in window) {
-      var trackIo = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            var i = slides.indexOf(e.target);
-            if (i > -1) { current = i; setActiveDot(i); }
-          }
-        });
-      }, { root: track, threshold: 0.6 });
-      slides.forEach(function (s) { trackIo.observe(s); });
-    }
-
+    scrollToPos(1, false);
+    setActiveDot(0);
     startAutoplay();
     track.addEventListener('mouseenter', function () { clearInterval(autoplay); });
     track.addEventListener('mouseleave', startAutoplay);
