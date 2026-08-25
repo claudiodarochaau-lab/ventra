@@ -697,8 +697,10 @@ p { max-width: var(--measure); }
   scroll-snap-align: start;
 }
 
-/* Slides 2-4: photo-backed promo banners, same visual treatment as the
-   hero (reuses .hero__photo's grayscale + gradient) but a single link. */
+/* Slides 2-4: fixed two-thirds solid / one-third photo split, so every
+   promo slide reads the same size regardless of the source photo's own
+   dimensions (unlike a full-bleed background, which sized itself off
+   whatever image happened to be dropped in). */
 .carousel__slide {
   flex: 0 0 100%;
   width: 100%;
@@ -706,9 +708,7 @@ p { max-width: var(--measure); }
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--sp-16) calc(var(--gutter) + 110px);
+  align-items: stretch;
   text-decoration: none;
   color: var(--white);
   background: var(--ventra-black);
@@ -721,8 +721,24 @@ p { max-width: var(--measure); }
   flex-direction: column;
   justify-content: center;
   gap: var(--sp-3);
+  flex: 0 0 66.6667%;
+  max-width: 66.6667%;
+  padding: var(--sp-16) var(--sp-16) var(--sp-16) var(--gutter);
+  box-sizing: border-box;
+}
+.carousel__slide__photo {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  position: relative;
+  overflow: hidden;
+}
+.carousel__slide__photo picture,
+.carousel__slide__photo img {
+  display: block;
   width: 100%;
-  max-width: var(--maxw);
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
 }
 .carousel__slide .section-label { margin-bottom: 0; }
 .carousel__slide h2 {
@@ -798,7 +814,17 @@ p { max-width: var(--measure); }
 .carousel__dot[aria-selected="true"] { background: var(--silver); }
 
 @media (max-width: 700px) {
-  .carousel__slide { padding: var(--sp-16) var(--gutter); }
+  .carousel__slide { flex-direction: column; }
+  .carousel__slide__inner {
+    flex: 1 1 55%;
+    max-width: 100%;
+    padding: var(--sp-10) var(--gutter);
+  }
+  .carousel__slide__photo {
+    flex: 1 1 45%;
+    max-width: 100%;
+    order: -1;
+  }
   .carousel__arrow { display: none; }
 }
 
