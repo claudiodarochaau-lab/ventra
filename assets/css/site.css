@@ -938,15 +938,6 @@ p { max-width: var(--measure); }
 }
 .surface-light .card-icon, .surface-white .card-icon { stroke: var(--stone); }
 
-/* ── Supplier brand marks — used inline in cards to name the actual
-     equipment/roasting partner, not just the category. ── */
-.card .brand-logo {
-  height: 26px;
-  width: auto;
-  margin: var(--sp-3) 0 var(--sp-4);
-}
-.card .brand-logo--pnr { height: 15px; }
-
 /* ── Back to top — injected by site.js ── */
 .back-to-top {
   position: fixed;
