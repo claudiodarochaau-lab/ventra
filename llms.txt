@@ -15,7 +15,7 @@ One agreement and one monthly invoice cover all of it.
 
 Every machine carries telemetry, so faults are usually detected and resolved
 by Ventra before campus staff notice. Day to day, a nominated "coffee
-champion" on campus runs a one-button daily clean and tops up beans and
+champion" on campus runs a daily clean and tops up beans and
 water between deliveries; everything else is Ventra's responsibility.
 
 ## Who it serves
