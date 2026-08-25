@@ -452,6 +452,13 @@
       text-align: left;
     }
 
+    /* The form fields stay left-aligned, but HubSpot's post-submit
+       confirmation message should match the rest of this centered
+       section, not inherit the form's left alignment. */
+    .hs-form-frame .submitted-message {
+      text-align: center;
+    }
+
     /* ─── TERMS & CONDITIONS (collapsed, footer-weight) ─── */
 
     #terms {
