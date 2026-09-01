@@ -1056,17 +1056,18 @@ a.mono-tag:hover { color: var(--ventra-black); }
   color: var(--stone);
   max-width: none;
 }
-.article__hero { margin-top: var(--sp-10); }
+.article__hero { margin-top: var(--sp-12); }
 .article__hero figcaption {
   margin-top: var(--sp-3);
   font-size: var(--fs-caption);
   color: var(--stone);
 }
-.article__body { margin-top: var(--sp-10); }
+.article__body { margin-top: var(--sp-12); }
 .article__body p { max-width: none; }
-.article__body p + p { margin-top: var(--sp-6); }
+.article__body p + p { margin-top: var(--sp-8); }
 .article__quote {
-  margin: var(--sp-8) 0;
+  clear: both;
+  margin: var(--sp-12) 0;
   padding-left: var(--sp-6);
   border-left: 3px solid var(--ventra-black);
 }
@@ -1079,21 +1080,32 @@ a.mono-tag:hover { color: var(--ventra-black); }
 }
 .article__quote cite {
   display: block;
-  margin-top: var(--sp-3);
+  margin-top: var(--sp-4);
   font-style: normal;
   font-family: var(--font-mono);
   font-size: var(--fs-label);
   letter-spacing: var(--ls-label);
   color: var(--stone);
 }
-.article__inline-image { margin: var(--sp-10) auto; max-width: 460px; }
+/* Reduced and floated so body copy wraps around it rather than the
+   image sitting full-width between paragraphs. */
+.article__inline-image {
+  float: right;
+  width: 260px;
+  max-width: 40%;
+  margin: 0 0 var(--sp-6) var(--sp-8);
+}
+@media (max-width: 640px) {
+  .article__inline-image { float: none; width: 100%; max-width: none; margin: var(--sp-8) 0; }
+}
 .article__about {
+  clear: both;
   margin-top: var(--sp-16);
-  padding-top: var(--sp-10);
+  padding-top: var(--sp-12);
   border-top: 1px solid var(--border-light);
 }
 .article__contact {
-  margin-top: var(--sp-10);
+  margin-top: var(--sp-12);
   padding: var(--sp-8);
   background: var(--pearl);
   border-radius: var(--radius);
@@ -1101,7 +1113,7 @@ a.mono-tag:hover { color: var(--ventra-black); }
 .article__contact h3 { margin-bottom: var(--sp-3); }
 .article__contact p { color: var(--stone); max-width: none; }
 .article__footer-row {
-  margin-top: var(--sp-10);
+  margin-top: var(--sp-12);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1116,7 +1128,7 @@ a.mono-tag:hover { color: var(--ventra-black); }
 .news-list { margin-top: var(--sp-12); display: flex; flex-direction: column; }
 .news-list__item {
   display: block;
-  padding-block: var(--sp-10);
+  padding-block: var(--sp-8);
   border-top: 1px solid var(--border-light);
   text-decoration: none;
   color: inherit;
