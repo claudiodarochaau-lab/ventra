@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ventra News</title>
+    <link>https://ventracoffee.com.au/news</link>
+    <atom:link href="https://ventracoffee.com.au/news/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Announcements, partnerships and updates from Ventra, Australia's managed coffee partner for higher education.</description>
+    <language>en-au</language>
+    <lastBuildDate>Tue, 01 Sep 2026 00:00:00 +1000</lastBuildDate>
+    <item>
+      <title>Ventra Launches Café-Quality Coffee at Charles Sturt University's Sydney and Melbourne Campuses</title>
+      <link>https://ventracoffee.com.au/news/ventra-launches-coffee-program-charles-sturt-university/</link>
+      <guid isPermaLink="true">https://ventracoffee.com.au/news/ventra-launches-coffee-program-charles-sturt-university/</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +1000</pubDate>
+      <category>Partnerships</category>
+      <description>Fully managed coffee program now live at CSU's city-centre campuses, delivered by Navitas.</description>
+    </item>
+  </channel>
+</rss>
