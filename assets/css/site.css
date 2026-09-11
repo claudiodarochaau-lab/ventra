@@ -1124,6 +1124,51 @@ a.mono-tag:hover { color: var(--ventra-black); }
 }
 .share-links { display: flex; align-items: center; gap: var(--sp-6); flex-wrap: wrap; }
 
+/* Author byline - avatar + name/title, used on opinion/analysis pieces
+   in place of (or alongside) the mono-tag/date meta line. */
+.article__byline {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-top: var(--sp-6);
+}
+.article__byline img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  filter: grayscale(1);
+}
+.article__byline p { font-size: var(--fs-sm); }
+.article__byline p:first-child { font-weight: var(--fw-medium); color: var(--ventra-black); }
+.article__byline p:last-child { color: var(--stone); }
+
+/* Key-stats callout - skimmable pull-out of the numbers a reader (or
+   an answer engine) would otherwise have to extract from prose. */
+.article__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--sp-8);
+  margin: var(--sp-12) 0;
+  padding-block: var(--sp-8);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+.article__stats dt {
+  font-family: var(--font-mono);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-semi);
+  letter-spacing: var(--ls-tight);
+  color: var(--ventra-black);
+}
+.article__stats dd {
+  margin-top: var(--sp-2);
+  font-size: var(--fs-sm);
+  color: var(--stone);
+  max-width: none;
+}
+
 /* ── News index ── */
 .news-list { margin-top: var(--sp-12); display: flex; flex-direction: column; }
 .news-list__item {
