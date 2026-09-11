@@ -1065,6 +1065,8 @@ a.mono-tag:hover { color: var(--ventra-black); }
 .article__body { margin-top: var(--sp-12); }
 .article__body p { max-width: none; }
 .article__body p + p { margin-top: var(--sp-8); }
+.article__body h2 { margin-top: var(--sp-16); }
+.article__body h2 + p { margin-top: var(--sp-6); }
 .article__quote {
   clear: both;
   margin: var(--sp-12) 0;
@@ -1158,7 +1160,7 @@ a.mono-tag:hover { color: var(--ventra-black); }
 .article__stats dt {
   font-family: var(--font-mono);
   font-size: var(--fs-h1);
-  font-weight: var(--fw-semi);
+  font-weight: var(--fw-bold);
   letter-spacing: var(--ls-tight);
   color: var(--ventra-black);
 }
