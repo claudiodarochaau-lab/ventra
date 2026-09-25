@@ -1171,6 +1171,35 @@ a.mono-tag:hover { color: var(--ventra-black); }
   max-width: none;
 }
 
+/* TL;DR callout - the answer-first summary for skimmers and answer
+   engines, ahead of the full argument in .article__body. */
+.article__tldr {
+  margin-top: var(--sp-12);
+  padding: var(--sp-8);
+  background: var(--pearl);
+  border-radius: var(--radius);
+}
+.article__tldr p.mono-tag { margin-bottom: var(--sp-4); }
+.article__tldr ul { list-style: none; }
+.article__tldr li {
+  position: relative;
+  padding-left: var(--sp-6);
+  color: var(--ventra-black);
+  max-width: none;
+}
+.article__tldr li + li { margin-top: var(--sp-4); }
+.article__tldr li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 9px;
+  height: 7px;
+  background: var(--ventra-black);
+  clip-path: polygon(0 0, 18% 0, 50% 78%, 82% 0, 100% 0, 58% 100%, 42% 100%);
+}
+.article__tldr li strong { font-weight: var(--fw-semi); }
+
 /* ── News index ── */
 .news-list { margin-top: var(--sp-12); display: flex; flex-direction: column; }
 .news-list__item {
