@@ -420,6 +420,20 @@
       margin: 0 auto;
     }
 
+    /* Reserves space for the HubSpot Meetings iframe, which injects itself
+       and reports its real height after this script-loaded embed finishes.
+       Without this, a late height change shifts #contact below the fold
+       after the browser has already jumped to a #contact deep link. */
+    .meetings-iframe-container {
+      min-height: 650px;
+    }
+
+    @media (max-width: 700px) {
+      .meetings-iframe-container {
+        min-height: 850px;
+      }
+    }
+
     /* ─── CONTACT / FORM (prize draw) ─────────────────────── */
 
     #contact {
@@ -669,6 +683,25 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // The booking embed above #contact loads late and reports its real
+    // height after the browser has already jumped to a #contact deep link
+    // (e.g. from the AIEC QR code), leaving the page scrolled to the
+    // calendar instead of the entry form. Re-run the scroll once the page
+    // has loaded, and once more shortly after: the embed's own async
+    // request (and its iframe resize) can finish after window 'load' has
+    // already fired, shifting #contact again with nothing left to correct it.
+    function scrollToContactIfNeeded() {
+      if (window.location.hash !== '#contact') return;
+      var el = document.getElementById('contact');
+      if (el) el.scrollIntoView();
+    }
+    window.addEventListener('load', function () {
+      scrollToContactIfNeeded();
+      setTimeout(scrollToContactIfNeeded, 1500);
+    });
+  </script>
 
 </body>
 </html>
